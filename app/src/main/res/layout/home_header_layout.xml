@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.youth.banner.Banner
+        app:image_scale_type="fit_xy"
+        android:id="@+id/banner_home"
+        android:layout_width="match_parent"
+        android:layout_height="540px"
+        app:title_textcolor="@color/colorPrimary"
+        app:title_textsize="32px"
+        app:title_height="70px"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_channel"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="免费推荐"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_free_recommoned"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="热点资讯"/>
+
+
+        <TextView
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b5b5b5"
+            android:text="更多"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_hot_news"></android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="精彩推荐"/>
+
+
+        <TextView
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b5b5b5"
+            android:text="更多"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_intrest_recommoned"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="大咖剧场"/>
+
+
+        <TextView
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b5b5b5"
+            android:text="更多"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_dk"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="电影资讯"/>
+
+
+        <TextView
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b5b5b5"
+            android:text="更多"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_movie_news"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f4f4f4"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <View
+            android:layout_centerVertical="true"
+            android:layout_width="10px"
+            android:layout_height="40px"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:text="大片抢先看"/>
+
+
+        <TextView
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b5b5b5"
+            android:text="更多"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_home_movie_qx"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

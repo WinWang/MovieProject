@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\qmui_icon_topbar_back.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable-anydpi-v21\\qmui_icon_topbar_back.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\qmui_icon_topbar_back.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable-anydpi-v21\\qmui_icon_topbar_back.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    }
+]

@@ -1,0 +1,850 @@
+[
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top_inset.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_thumb.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_switch_thumb.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_edittext_bg_border_bottom.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_edittext_bg_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_track.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_switch_track.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_checkbox.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_checkbox.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_dark.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_pressed.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_thumb_checked.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_switch_thumb_checked.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_top.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_popup_arrow_up.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_popup_arrow_up.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_edittext_bg_border_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_edittext_bg_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_tips_point.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_tips_point.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top_inset.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top_inset_left.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_top_inset_left.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_fab_background.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_icon_background.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_divider_bottom_bitmap.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_divider_bottom_bitmap.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\688b55a5784a42abb93914366199da85\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_switch_thumb.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_switch_thumb.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_switch_thumb.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_switch_thumb.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_left.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_left.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_double_border.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_double_border.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_track.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_switch_track.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_double.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_double.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_action_btn_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_dialog_action_btn_bg.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_left.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_left.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_divider_top_bitmap.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_divider_top_bitmap.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_none.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_none.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_top.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_double_border_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_double_border_pressed.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top_pressed.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_action_btn_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_dialog_action_btn_bg.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_tip_dialog_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_tip_dialog_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top_inset_left.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_top_inset_left.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_double_border.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_double_border.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_double.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_double.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_divider_bottom_bitmap.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_divider_bottom_bitmap.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_checkbox.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_checkbox.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg_low.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_icon_switch.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_icon_switch.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_dialog_check_mark.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_dialog_check_mark.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\688b55a5784a42abb93914366199da85\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\13f6e8e9172789625e2595e689417103\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_none.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_none.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_pressed.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\10d480a19cbb2e762f0a958458fdf33b\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_pressed.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\688b55a5784a42abb93914366199da85\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_divider_top_bitmap.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_divider_top_bitmap.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset_left.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset_left.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_dialog_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_left_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_left_pressed.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top_inset.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_list_item_bg_with_border_top_inset.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_sign_count_view_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_sign_count_view_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\13f6e8e9172789625e2595e689417103\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_top.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_popup_arrow_up.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_popup_arrow_up.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_dialog_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_sign_count_view_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_sign_count_view_bg.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset_left.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_bottom_inset_left.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_action_button_bg_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_dialog_action_button_bg_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\13f6e8e9172789625e2595e689417103\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_tips_point.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_tips_point.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\688b55a5784a42abb93914366199da85\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_tip_dialog_bg.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_tip_dialog_bg.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_dialog_action_button_bg_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_dialog_action_button_bg_pressed.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_top_inset_left_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_border_top_inset_left_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_thumb_checked.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_switch_thumb_checked.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_light.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_switch_track.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_switch_track.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_switch_track.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_switch_track.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_track_checked.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_switch_track_checked.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\a247a871d7365e1d76f8b814ab113711\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_double_border_pressed.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_list_item_bg_with_double_border_pressed.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_dialog_check_mark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\71d3659a1162cbedead612547c2c923e\\res\\drawable\\qmui_s_dialog_check_mark.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left_pressed.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_list_item_bg_with_border_bottom_inset_left_pressed.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_thumb.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_switch_thumb.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ec8df092ee493c55c5f4180134a7a387\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_icon_switch.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_icon_switch.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_switch_track_checked.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_switch_track_checked.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\AndroidProject\\StudyProject\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b4c840899e8797ca38821d616bcbfed1\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\13f6e8e9172789625e2595e689417103\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "F:\\ljfmvp\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\qmui_s_list_item_bg_with_border_top_inset.xml",
+        "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-1\\files-1.1\\qmui-1.1.2.aar\\0dbf072b088826e288b5fce170dcf4bb\\res\\drawable\\qmui_s_list_item_bg_with_border_top_inset.xml"
+    },
+    {
+        "merged": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "F:\\realProject\\XDroidMvp-master\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    }
+]

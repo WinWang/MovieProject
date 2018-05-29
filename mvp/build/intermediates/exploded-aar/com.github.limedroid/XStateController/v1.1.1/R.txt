@@ -1,0 +1,10 @@
+int attr x_contentLayoutId 0x7f010000
+int attr x_emptyLayoutId 0x7f010002
+int attr x_errorLayoutId 0x7f010003
+int attr x_loadingLayoutId 0x7f010001
+int string app_name 0x7f020000
+int[] styleable XStateController { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003 }
+int styleable XStateController_x_contentLayoutId 0
+int styleable XStateController_x_emptyLayoutId 2
+int styleable XStateController_x_errorLayoutId 3
+int styleable XStateController_x_loadingLayoutId 1

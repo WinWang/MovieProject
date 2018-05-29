@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:enabled="true"
+        android:icon="@mipmap/btn_home_nor"
+        android:title="首页"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/bottom_ticket"
+        android:enabled="true"
+        android:icon="@mipmap/btn_wp_nor"
+        android:title="电影票"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/bottom_find"
+        android:enabled="true"
+        android:icon="@mipmap/home_find_nor"
+        android:title="发现"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/bottom_mine"
+        android:enabled="true"
+        android:icon="@mipmap/btn_user_nor"
+        android:title="我的"
+        app:showAsAction="withText"/>
+
+
+</menu>

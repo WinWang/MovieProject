@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="x_blue">#FF375BF1</color>
+    <color name="x_green">#FF34A350</color>
+    <color name="x_red">#FFC93437</color>
+    <color name="x_yellow">#FFF7D23E</color>
+    <declare-styleable name="XRecyclerContentLayout"><attr format="boolean" name="recyclerClipToPadding"/><attr format="dimension" name="recyclerPadding"/><attr format="dimension" name="recyclerPaddingTop"/><attr format="dimension" name="recyclerPaddingBottom"/><attr format="dimension" name="recyclerPaddingLeft"/><attr format="dimension" name="recyclerPaddingRight"/><attr format="boolean" name="recyclerScrollbarNone"/><attr format="color" name="recyclerBackgroundColor"/><attr name="recyclerScrollbarStyle">
+            <flag name="insideOverlay" value="0x00000000"/>
+            <flag name="insideInset" value="0x01000000"/>
+            <flag name="outsideOverlay" value="0x02000000"/>
+            <flag name="outsideInset" value="0x03000000"/>
+        </attr></declare-styleable>
+    <string name="app_name">Library</string>
+</resources>

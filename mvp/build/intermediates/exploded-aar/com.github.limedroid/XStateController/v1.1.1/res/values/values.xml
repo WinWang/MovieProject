@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XStateController"><attr format="reference" name="x_contentLayoutId"/><attr format="reference" name="x_loadingLayoutId"/><attr format="reference" name="x_emptyLayoutId"/><attr format="reference" name="x_errorLayoutId"/></declare-styleable>
+    <string name="app_name">Library</string>
+</resources>

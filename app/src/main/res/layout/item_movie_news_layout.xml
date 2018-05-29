@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="820px"
+        android:layout_height="700px">
+        
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="770px"
+            android:layout_height="639px"
+            >
+            <ImageView
+                android:id="@+id/iv_home_movie_news_cover"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="226px"
+                android:src="#e5e5e5"/>
+
+            <TextView
+                android:id="@+id/tv_home_movie_news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="40px"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="50px"/>
+
+
+            <TextView
+                android:id="@+id/tv_home_movie_news_decr"
+                android:layout_marginRight="30px"
+                android:maxLines="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="35px"
+                android:textColor="#757575"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="50px"/>
+
+            <TextView
+                android:id="@+id/tv_home_movie_news_date"
+                android:layout_marginRight="30px"
+                android:maxLines="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ssss"
+                android:textSize="40px"
+                android:textColor="#757575"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="50px"/>
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+        
+        
+    </LinearLayout>
+    
+    
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.lepoint.ljfmvp.ui.activity.MainActivity">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/qm_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"
+        app:qmui_topbar_title_color="@color/qmui_config_color_75_white"
+        ></com.qmuiteam.qmui.widget.QMUITopBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试按钮"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/home_navigation_color"
+        app:itemTextColor="@drawable/home_navigation_color"
+        app:menu="@menu/navigation"></android.support.design.widget.BottomNavigationView>
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/home_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.ashokvarma.bottomnavigation.BottomNavigationBar>
+
+</LinearLayout>
