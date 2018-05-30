@@ -5,6 +5,7 @@ import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.TokenBean;
 import com.lepoint.ljfmvp.model.UpdateBean;
+import com.lepoint.ljfmvp.model.VideoDetailBean;
 
 import io.reactivex.Flowable;
 import okhttp3.ResponseBody;
@@ -54,6 +55,10 @@ public interface ApiService {
     //获取首页分类列表
     @GET("front/homePage/channelList.do?information=information")
     Flowable<HomeChannelBean> getHomeChannel();
+
+    //获取视频新详情列表
+    @GET("front/videoDetailApi/videoDetail.do")
+    Flowable<VideoDetailBean> getVideoDetail(@Query("mediaId") String mediaId, @Query("deviceId") String deviceId);
 
 
 }

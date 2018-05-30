@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.BannerAdapter;
 import com.lepoint.ljfmvp.adapter.HomeAdapter;
@@ -18,6 +19,8 @@ import com.lepoint.ljfmvp.adapter.MovieNewsAdapter;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.present.HomeFragPresent;
+import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
+import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -32,6 +35,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.imageloader.ILFactory;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
+import cn.droidlover.xdroidmvp.router.Router;
 
 /**
  * Created by admin on 2018/4/12.
@@ -46,16 +50,20 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     @BindView(R.id.iv_home_seach)
     ImageView ivHomeSeach;
     @BindView(R.id.qmrl_home_seach)
-    QMUIRoundRelativeLayout qmrlHomeSeach;
+    AutoRoundRelativielayout qmrlHomeSeach;
     @BindView(R.id.iv_home_history)
     ImageView ivHomeHistory;
     List dataList = new ArrayList<String>();
     List channelList = new ArrayList<HomeChannelBean.RetBean.ColumnListBean>();
-    List recommendList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
-    List hotList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
-    List intrestList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
-    List dkList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
-    List movieNewsList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> recommendList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hotList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> intrestList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> dkList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> movieNewsList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> movieDP = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hkList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hlwList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> netList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     private HomeAdapter homeAdapter;
     private Banner banner;
     private HomeChannelAdapter homeChannelAdapter;
@@ -64,10 +72,15 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     private MovieAdapter intrestAdapter;
     private MovieAdapter dkAdapter;
     private MovieNewsAdapter movieNewsAdapter;
+    private MovieAdapter dpAdapter;
+    private MovieAdapter hkAdapter;
+    private MovieAdapter netAdapter;
+    private MovieAdapter hlwAdapter;
 
     @Override
     public void initData(Bundle savedInstanceState) {
         initView();
+        initListener();
         getP().getHomeListData(context);
         getP().getHomeChannel(context);
     }
@@ -120,9 +133,65 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
 
         //电影资讯
         RecyclerView rvMovieNews = (RecyclerView) header.findViewById(R.id.rv_home_movie_news);
-        rvMovieNews.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        rvMovieNews.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         movieNewsAdapter = new MovieNewsAdapter(R.layout.item_movie_news_layout, movieNewsList, context);
         rvMovieNews.setAdapter(movieNewsAdapter);
+
+        //大片抢先看
+        RecyclerView rvDP = (RecyclerView) header.findViewById(R.id.rv_home_movie_qx);
+        rvDP.setLayoutManager(new GridLayoutManager(context, 3));
+        dpAdapter = new MovieAdapter(R.layout.item_layout_intrest_layout, movieDP, null);
+        rvDP.setAdapter(dpAdapter);
+
+
+        //微电影
+        RecyclerView rvNet = (RecyclerView) header.findViewById(R.id.rv_home_movie_net);
+        rvNet.setLayoutManager(new GridLayoutManager(context, 3));
+        netAdapter = new MovieAdapter(R.layout.item_layout_intrest_layout, netList, null);
+        rvNet.setAdapter(netAdapter);
+
+        //香港映像
+        RecyclerView rvHK = (RecyclerView) header.findViewById(R.id.rv_home_movie_hongkong);
+        rvHK.setLayoutManager(new GridLayoutManager(context, 3));
+        hkAdapter = new MovieAdapter(R.layout.item_layout_intrest_layout, hkList, null);
+        rvHK.setAdapter(hkAdapter);
+
+        //好莱坞
+        RecyclerView rvHlw = (RecyclerView) header.findViewById(R.id.rv_home_movie_hlw);
+        rvHlw.setLayoutManager(new GridLayoutManager(context, 3));
+        hlwAdapter = new MovieAdapter(R.layout.item_layout_intrest_layout, hlwList, null);
+        rvHlw.setAdapter(hlwAdapter);
+
+
+    }
+
+    private void initListener() {
+        setonItemClick(freeAdapter, recommendList);
+        setonItemClick(hotNewsAdapter, hotList);
+        setonItemClick(intrestAdapter, intrestList);
+        setonItemClick(dkAdapter, dkList);
+        setonItemClick(dpAdapter, movieDP);
+        setonItemClick(netAdapter, netList);
+        setonItemClick(hkAdapter, hkList);
+        setonItemClick(hlwAdapter, hlwList);
+
+    }
+
+    private void setonItemClick(MovieAdapter adapter, final ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> list) {
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String dataId = list.get(position).getDataId();
+                jumpMethod(dataId);
+            }
+        });
+    }
+
+    private void jumpMethod(String mediaID) {
+        Router.newIntent(context)
+                .to(VideoDetailActivity.class)
+                .putString("mediaID", mediaID)
+                .launch();
     }
 
     public void setBannerData(List<String> bannerData, List<String> titleData) {
@@ -155,28 +224,98 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
         intrestAdapter.notifyDataSetChanged();
     }
 
-    public void setDkList(List<HomeListBean.RetBean.ListBean.ChildListBean> list){
+    public void setDkList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
         dkList.clear();
-        dkAdapter.removeAllHeaderView();
-        View header = View.inflate(context, R.layout.header_movie_layout, null);
-        ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
-        TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
-        ILFactory.getLoader().loadNet(bigImage,list.get(0).getPic(),null);
-        titleBig.setText(list.get(0).getTitle());
-        list.remove(0);
-        dkAdapter.addHeaderView(header);
+        if (list.size() >= 7) {
+            dkAdapter.removeAllHeaderView();
+            View header = View.inflate(context, R.layout.header_movie_layout, null);
+            ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
+            TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
+            ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
+            titleBig.setText(list.get(0).getTitle());
+            list.remove(0);
+            dkAdapter.addHeaderView(header);
+        }
         dkList.addAll(list);
         dkAdapter.notifyDataSetChanged();
 
     }
 
 
-    public void setMovieNewsList(List<HomeListBean.RetBean.ListBean.ChildListBean> list){
+    public void setMovieNewsList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
         movieNewsList.clear();
         movieNewsList.addAll(list);
         movieNewsAdapter.notifyDataSetChanged();
     }
 
+
+    public void setDPList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
+        movieDP.clear();
+        if (list.size() >= 7) {
+            dpAdapter.removeAllHeaderView();
+            View header = View.inflate(context, R.layout.header_movie_layout, null);
+            ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
+            TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
+            ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
+            titleBig.setText(list.get(0).getTitle());
+            list.remove(0);
+            dpAdapter.addHeaderView(header);
+        }
+        movieDP.addAll(list);
+        dpAdapter.notifyDataSetChanged();
+
+    }
+
+
+    public void setNetList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
+        netList.clear();
+        if (list.size() >= 7) {
+            netAdapter.removeAllHeaderView();
+            View header = View.inflate(context, R.layout.header_movie_layout, null);
+            ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
+            TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
+            ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
+            titleBig.setText(list.get(0).getTitle());
+            list.remove(0);
+            netAdapter.addHeaderView(header);
+        }
+        netList.addAll(list);
+        netAdapter.notifyDataSetChanged();
+
+    }
+
+    public void setHKList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
+        hkList.clear();
+        if (list.size() >= 7) {
+            hkAdapter.removeAllHeaderView();
+            View header = View.inflate(context, R.layout.header_movie_layout, null);
+            ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
+            TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
+            ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
+            titleBig.setText(list.get(0).getTitle());
+            list.remove(0);
+            hkAdapter.addHeaderView(header);
+        }
+        hkList.addAll(list);
+        hkAdapter.notifyDataSetChanged();
+    }
+
+    public void setHlwList(List<HomeListBean.RetBean.ListBean.ChildListBean> list) {
+        hlwList.clear();
+        if (list.size() >= 7) {
+            hlwAdapter.removeAllHeaderView();
+            View header = View.inflate(context, R.layout.header_movie_layout, null);
+            ImageView bigImage = (ImageView) header.findViewById(R.id.iv_home_movie_header);
+            TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
+            ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
+            titleBig.setText(list.get(0).getTitle());
+            list.remove(0);
+            hlwAdapter.addHeaderView(header);
+        }
+        hlwList.addAll(list);
+        hlwAdapter.notifyDataSetChanged();
+
+    }
 
     @Override
     public int getLayoutId() {

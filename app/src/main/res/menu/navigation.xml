@@ -12,7 +12,7 @@
         android:id="@+id/bottom_ticket"
         android:enabled="true"
         android:icon="@mipmap/btn_wp_nor"
-        android:title="电影票"
+        android:title="故事会"
         app:showAsAction="withText"/>
 
     <item

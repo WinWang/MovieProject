@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_marginTop="30px"
+        android:id="@+id/tv_video_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:text="影片信息"
+        android:textColor="#bdbdbd"
+        android:textSize="32px" />
+
+    <ImageView
+        android:id="@+id/iv_video_detail_desc_tag"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginLeft="950px"
+        android:layout_marginTop="60px"
+        android:padding="15px"
+        android:src="@mipmap/btn_play_spread" />
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_movie_desc"
+            android:layout_width="850px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="60px"
+            android:lineSpacingExtra="10px"
+            android:singleLine="true"
+            android:text="主演："
+            android:textColor="#bdbdbd"
+            android:textSize="32px" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_marginTop="10px"
+            android:background="#efefef" />
+        <TextView
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关视频"
+            android:textColor="#575757"
+            android:textSize="38px"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_video_detail_about"></android.support.v7.widget.RecyclerView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_marginTop="10px"
+            android:background="#efefef" />
+        <TextView
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="猜你喜欢"
+            android:textColor="#575757"
+            android:textSize="38px"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_video_detail_like"></android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:background="#efefef"/>
+
+        <TextView
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:textColor="#575757"
+            android:textSize="38px"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

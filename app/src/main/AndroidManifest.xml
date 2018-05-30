@@ -46,19 +46,21 @@
             android:value="2.2" />
         <meta-data
             android:name="design_width"
-            android:value="1080"></meta-data>
+            android:value="1080" />
         <meta-data
             android:name="design_height"
-            android:value="1920"></meta-data>
+            android:value="1920" />
 
-        <activity android:name=".ui.activity.SplashActivity">
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.TestActivity"></activity>
+        <activity android:name=".ui.activity.TestActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -70,7 +72,14 @@
                 android:resource="@xml/file_paths_public" />
         </provider>
 
-        <activity android:name=".ui.activity.MainActivity"></activity>
-        <activity android:name="com.lepoint.ljfmvp.ui.activity.HomeActivity"></activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VideoDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
     </application>
+
 </manifest>

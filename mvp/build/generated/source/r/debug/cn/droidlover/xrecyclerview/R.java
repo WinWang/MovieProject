@@ -8,34 +8,34 @@ package cn.droidlover.xrecyclerview;
 
 public final class R {
     public static final class attr {
-        public static int layoutManager = 0x7f0400c3;
-        public static int recyclerBackgroundColor = 0x7f0401fb;
-        public static int recyclerClipToPadding = 0x7f0401fc;
-        public static int recyclerPadding = 0x7f0401fd;
-        public static int recyclerPaddingBottom = 0x7f0401fe;
-        public static int recyclerPaddingLeft = 0x7f0401ff;
-        public static int recyclerPaddingRight = 0x7f040200;
-        public static int recyclerPaddingTop = 0x7f040201;
-        public static int recyclerScrollbarNone = 0x7f040202;
-        public static int recyclerScrollbarStyle = 0x7f040203;
-        public static int reverseLayout = 0x7f040204;
-        public static int spanCount = 0x7f040214;
-        public static int stackFromEnd = 0x7f04021a;
-        public static int x_contentLayoutId = 0x7f040272;
-        public static int x_emptyLayoutId = 0x7f040273;
-        public static int x_errorLayoutId = 0x7f040274;
-        public static int x_loadingLayoutId = 0x7f040275;
+        public static int layoutManager = 0x7f0400ce;
+        public static int recyclerBackgroundColor = 0x7f040206;
+        public static int recyclerClipToPadding = 0x7f040207;
+        public static int recyclerPadding = 0x7f040208;
+        public static int recyclerPaddingBottom = 0x7f040209;
+        public static int recyclerPaddingLeft = 0x7f04020a;
+        public static int recyclerPaddingRight = 0x7f04020b;
+        public static int recyclerPaddingTop = 0x7f04020c;
+        public static int recyclerScrollbarNone = 0x7f04020d;
+        public static int recyclerScrollbarStyle = 0x7f04020e;
+        public static int reverseLayout = 0x7f04020f;
+        public static int spanCount = 0x7f04021f;
+        public static int stackFromEnd = 0x7f040225;
+        public static int x_contentLayoutId = 0x7f04027d;
+        public static int x_emptyLayoutId = 0x7f04027e;
+        public static int x_errorLayoutId = 0x7f04027f;
+        public static int x_loadingLayoutId = 0x7f040280;
     }
     public static final class color {
-        public static int x_blue = 0x7f060099;
-        public static int x_green = 0x7f06009a;
-        public static int x_red = 0x7f06009b;
-        public static int x_yellow = 0x7f06009c;
+        public static int x_blue = 0x7f06009d;
+        public static int x_green = 0x7f06009e;
+        public static int x_red = 0x7f06009f;
+        public static int x_yellow = 0x7f0600a0;
     }
     public static final class dimen {
-        public static int item_touch_helper_max_drag_scroll_per_frame = 0x7f080084;
-        public static int item_touch_helper_swipe_escape_max_velocity = 0x7f080085;
-        public static int item_touch_helper_swipe_escape_velocity = 0x7f080086;
+        public static int item_touch_helper_max_drag_scroll_per_frame = 0x7f080087;
+        public static int item_touch_helper_swipe_escape_max_velocity = 0x7f080088;
+        public static int item_touch_helper_swipe_escape_velocity = 0x7f080089;
     }
     public static final class id {
         public static int insideInset = 0x7f0c0063;
@@ -56,7 +56,7 @@ public final class R {
         public static int app_name = 0x7f150020;
     }
     public static final class styleable {
-        public static int[] RecyclerView = { 0x010100f1, 0x010100c4, 0x7f040099, 0x7f04009a, 0x7f04009b, 0x7f04009c, 0x7f04009d, 0x7f0400c3, 0x7f040204, 0x7f040214, 0x7f04021a };
+        public static int[] RecyclerView = { 0x010100f1, 0x010100c4, 0x7f0400a4, 0x7f0400a5, 0x7f0400a6, 0x7f0400a7, 0x7f0400a8, 0x7f0400ce, 0x7f04020f, 0x7f04021f, 0x7f040225 };
         public static int RecyclerView_android_descendantFocusability = 0;
         public static int RecyclerView_android_orientation = 1;
         public static int RecyclerView_fastScrollEnabled = 2;
@@ -68,7 +68,7 @@ public final class R {
         public static int RecyclerView_reverseLayout = 8;
         public static int RecyclerView_spanCount = 9;
         public static int RecyclerView_stackFromEnd = 10;
-        public static int[] XRecyclerContentLayout = { 0x7f0401fb, 0x7f0401fc, 0x7f0401fd, 0x7f0401fe, 0x7f0401ff, 0x7f040200, 0x7f040201, 0x7f040202, 0x7f040203 };
+        public static int[] XRecyclerContentLayout = { 0x7f040206, 0x7f040207, 0x7f040208, 0x7f040209, 0x7f04020a, 0x7f04020b, 0x7f04020c, 0x7f04020d, 0x7f04020e };
         public static int XRecyclerContentLayout_recyclerBackgroundColor = 0;
         public static int XRecyclerContentLayout_recyclerClipToPadding = 1;
         public static int XRecyclerContentLayout_recyclerPadding = 2;
@@ -78,7 +78,7 @@ public final class R {
         public static int XRecyclerContentLayout_recyclerPaddingTop = 6;
         public static int XRecyclerContentLayout_recyclerScrollbarNone = 7;
         public static int XRecyclerContentLayout_recyclerScrollbarStyle = 8;
-        public static int[] XStateController = { 0x7f040272, 0x7f040273, 0x7f040274, 0x7f040275 };
+        public static int[] XStateController = { 0x7f04027d, 0x7f04027e, 0x7f04027f, 0x7f040280 };
         public static int XStateController_x_contentLayoutId = 0;
         public static int XStateController_x_emptyLayoutId = 1;
         public static int XStateController_x_errorLayoutId = 2;

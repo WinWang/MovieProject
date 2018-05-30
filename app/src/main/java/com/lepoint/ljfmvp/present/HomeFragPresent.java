@@ -79,6 +79,21 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                                 List<HomeListBean.RetBean.ListBean.ChildListBean> movieNewsList = list.get(6).getChildList();
                                 getV().setMovieNewsList(movieNewsList);
 
+                                //大片抢先看
+                                List<HomeListBean.RetBean.ListBean.ChildListBean> dpMovieList = list.get(7).getChildList();
+                                getV().setDPList(dpMovieList);
+
+                                //微电影
+                                List<HomeListBean.RetBean.ListBean.ChildListBean> netList = list.get(8).getChildList();
+                                getV().setNetList(netList);
+
+                                //香港映像
+                                List<HomeListBean.RetBean.ListBean.ChildListBean> hkList = list.get(9).getChildList();
+                                getV().setHKList(hkList);
+
+                                //好莱坞
+                                List<HomeListBean.RetBean.ListBean.ChildListBean> hlwList = list.get(10).getChildList();
+                                getV().setHlwList(hlwList);
 
                             }
                         }

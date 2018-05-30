@@ -83,5 +83,9 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
         return true;
     }
 
+    public void showToast(String toast) {
+        getvDelegate().toastShort(toast);
+    }
+
 
 }

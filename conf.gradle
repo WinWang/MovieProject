@@ -4,7 +4,7 @@ ext {
             compileSdkVersion: 26,
             buildToolsVersion: "26.0.2",
 
-            minSdkVersion    : 15,
+            minSdkVersion    : 16,
             targetSdkVersion : 23,
 
             versionCode      : 2,
@@ -21,6 +21,7 @@ ext {
             "design"                     : "com.android.support:design:${android["VSupportSdk"]}",
             "annotations"                : "com.android.support:support-annotations:${android["VSupportSdk"]}",
             "recyclerview-v7"            : "com.android.support:recyclerview-v7:${android["VSupportSdk"]}",
+            "cardview"                   : "com.android.support:cardview-v7:${android["VSupportSdk"]}",
 
             "butterknife"                : "com.jakewharton:butterknife:8.4.0",
             "butterknife-apt"            : "com.jakewharton:butterknife-compiler:8.4.0",
@@ -46,8 +47,9 @@ ext {
             "canary-debug"               : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
             "canary-release"             : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
 
-            "QMUI"                       :"com.qmuiteam:qmui:1.1.2",
-            "EventBus"                   :"org.greenrobot:eventbus:3.1.1"
+            "QMUI"                       : "com.qmuiteam:qmui:1.1.2",
+            "EventBus"                   : "org.greenrobot:eventbus:3.1.1",
+            "jiaozi"                     : "cn.jzvd:jiaozivideoplayer:6.2.10"
 
     ]
 

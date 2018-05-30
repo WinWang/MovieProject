@@ -7,6 +7,7 @@
 
 
     <RelativeLayout
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="120px">
 
@@ -17,7 +18,7 @@
             android:src="@mipmap/icon_home_left"
             />
 
-        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+        <com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout
             android:id="@+id/qmrl_home_seach"
             android:layout_centerInParent="true"
             android:layout_width="785px"
@@ -44,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="复仇者联盟3"/>
 
-        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+        </com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout>
 
 
         <ImageView

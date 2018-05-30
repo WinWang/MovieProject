@@ -34,4 +34,6 @@ dependencies {
     api project(':autolayout')
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+    implementation rootProject.ext.dependencies["jiaozi"]
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }

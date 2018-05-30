@@ -11,11 +11,13 @@
         android:layout_width="820px"
         android:layout_height="700px">
         
-        <com.qmuiteam.qmui.layout.QMUILinearLayout
+        <com.lepoint.ljfmvp.widget.autolayout.AutoCardView
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:layout_width="770px"
             android:layout_height="639px"
+            app:cardElevation="10px"
+            app:cardCornerRadius="8px"
             >
             <ImageView
                 android:id="@+id/iv_home_movie_news_cover"
@@ -25,15 +27,16 @@
                 android:src="#e5e5e5"/>
 
             <TextView
+
                 android:id="@+id/tv_home_movie_news_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="ddddddd"
                 android:textSize="40px"
                 android:singleLine="true"
                 android:textColor="#000"
                 android:layout_marginLeft="30px"
-                android:layout_marginTop="50px"/>
+                android:layout_marginTop="284px"/>
 
 
             <TextView
@@ -42,11 +45,11 @@
                 android:maxLines="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="fffffff"
                 android:textSize="35px"
                 android:textColor="#757575"
                 android:layout_marginLeft="30px"
-                android:layout_marginTop="50px"/>
+                android:layout_marginTop="365px"/>
 
             <TextView
                 android:id="@+id/tv_home_movie_news_date"
@@ -58,9 +61,9 @@
                 android:textSize="40px"
                 android:textColor="#757575"
                 android:layout_marginLeft="30px"
-                android:layout_marginTop="50px"/>
+                android:layout_marginTop="562px"/>
 
-        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+        </com.lepoint.ljfmvp.widget.autolayout.AutoCardView>
         
         
     </LinearLayout>
