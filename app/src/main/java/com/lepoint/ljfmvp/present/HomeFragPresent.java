@@ -58,7 +58,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                                     bannerList.add(bean.getPic());
                                     titleList.add(bean.getTitle());
                                 }
-                                getV().setBannerData(bannerList, titleList);
+                                getV().setBannerData(bannerList, titleList,childList);
                                 //免费推荐
                                 List<HomeListBean.RetBean.ListBean.ChildListBean> freeList = list.get(1).getChildList();
                                 getV().setFreeRecommonedData(freeList);

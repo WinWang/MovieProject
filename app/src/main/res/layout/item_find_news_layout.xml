@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="400px">
+
+        <TextView
+            android:id="@+id/tv_find_news_title"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="40px"
+            android:maxLines="2"
+            android:text="sdfasdf"
+            android:textColor="#000"
+            android:textSize="50px" />
+
+
+        <TextView
+            android:id="@+id/tv_find_news_desc"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="207px"
+            android:maxLines="2"
+            android:text="sdfa"
+            android:textColor="#757575"
+            android:textSize="37px" />
+
+
+        <ImageView
+            android:id="@+id/iv_find_news_cover"
+            android:layout_width="310px"
+            android:layout_height="310px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="730px"
+            android:background="#e5e5e5"
+            android:scaleType="centerCrop" />
+
+
+        <View
+            android:layout_marginLeft="40px"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#bfbfbf" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

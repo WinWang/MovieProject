@@ -79,7 +79,8 @@
         <activity
             android:name=".ui.activity.VideoDetailActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.MovieTypeActivity"></activity>
     </application>
 
 </manifest>

@@ -60,7 +60,7 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     protected void initTopBar() {
         topBar = (QMUITopBar) findViewById(R.id.qm_topbar);
         if (topBar != null) {
-            topBar.setBackgroundColor(ContextCompat.getColor(this, R.color.x_yellow));
+//            topBar.setBackgroundColor(ContextCompat.getColor(this, R.color.x_yellow));
             if (isShowBack()) {
                 topBar.addLeftImageButton(R.drawable.ic_keyboard_arrow_left_black_24dp, R.id.qmui_topbar_item_left_back).setOnClickListener(new View.OnClickListener() {
                     @Override

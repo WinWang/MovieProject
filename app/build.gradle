@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
     implementation rootProject.ext.dependencies["jiaozi"]
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
 }

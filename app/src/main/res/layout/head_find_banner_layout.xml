@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="541px">
+
+        <ImageView
+            android:id="@+id/iv_back_find_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e5e5e5"
+            android:scaleType="centerCrop" />
+
+        <com.lepoint.ljfmvp.widget.GalleryRecyclerView
+            android:id="@+id/grv_find_head"
+            android:layout_width="match_parent"
+            android:layout_height="465px"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:text="sdfasdf"
+        android:gravity="center"
+        android:id="@+id/tv_find_news_head_title"
+        android:layout_width="match_parent"
+        android:layout_height="119px"
+        android:textColor="#000"
+        android:textSize="45px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#e5e5e5"/>
+
+
+</LinearLayout>

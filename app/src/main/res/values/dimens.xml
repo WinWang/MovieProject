@@ -2,4 +2,5 @@
 <resources>
     <dimen name="design_bottom_navigation_active_text_size">12dp</dimen>
     <dimen name="design_bottom_navigation_text_size">12dp</dimen>
+    <dimen name="find_header_space">-15dp</dimen>
 </resources>

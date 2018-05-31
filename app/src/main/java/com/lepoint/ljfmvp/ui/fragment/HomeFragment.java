@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.lepoint.ljfmvp.adapter.MovieNewsAdapter;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.present.HomeFragPresent;
+import com.lepoint.ljfmvp.ui.activity.MovieTypeActivity;
 import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
 import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout;
@@ -27,6 +29,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +57,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     @BindView(R.id.iv_home_history)
     ImageView ivHomeHistory;
     List dataList = new ArrayList<String>();
-    List channelList = new ArrayList<HomeChannelBean.RetBean.ColumnListBean>();
+    ArrayList<HomeChannelBean.RetBean.ColumnListBean> channelList = new ArrayList<HomeChannelBean.RetBean.ColumnListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> recommendList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hotList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> intrestList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
@@ -64,6 +67,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hkList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hlwList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> netList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
+    List<HomeListBean.RetBean.ListBean.ChildListBean> bannerList = null;
     private HomeAdapter homeAdapter;
     private Banner banner;
     private HomeChannelAdapter homeChannelAdapter;
@@ -174,6 +178,42 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
         setonItemClick(netAdapter, netList);
         setonItemClick(hkAdapter, hkList);
         setonItemClick(hlwAdapter, hlwList);
+        movieNewsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String dataId = movieNewsList.get(position).getDataId();
+                jumpMethod(dataId);
+            }
+        });
+
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                String dataId = bannerList.get(position).getDataId();
+                if (TextUtils.isEmpty(dataId)) {
+                    getvDelegate().toastShort("暂不可用");
+                } else {
+                    jumpMethod(dataId);
+                }
+            }
+        });
+
+        homeChannelAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String dataId = channelList.get(position).getDataId();
+                String title = channelList.get(position).getTitle();
+                if (!TextUtils.isEmpty(dataId)) {
+                    Router.newIntent(context).to(MovieTypeActivity.class)
+                            .putString("dataID", dataId)
+                            .putString("title",title)
+                            .launch();
+                }else {
+                    getvDelegate().toastShort("暂不支持，敬请期待");
+                }
+            }
+        });
+
 
     }
 
@@ -194,7 +234,8 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
                 .launch();
     }
 
-    public void setBannerData(List<String> bannerData, List<String> titleData) {
+    public void setBannerData(List<String> bannerData, List<String> titleData, List<HomeListBean.RetBean.ListBean.ChildListBean> bannerList) {
+        this.bannerList = bannerList;
         banner.setImages(bannerData);
         banner.setBannerTitles(titleData);
         banner.start();
@@ -233,6 +274,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
             TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
             ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
             titleBig.setText(list.get(0).getTitle());
+            setBigImgClick(bigImage, list.get(0).getDataId());
             list.remove(0);
             dkAdapter.addHeaderView(header);
         }
@@ -258,6 +300,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
             TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
             ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
             titleBig.setText(list.get(0).getTitle());
+            setBigImgClick(bigImage, list.get(0).getDataId());
             list.remove(0);
             dpAdapter.addHeaderView(header);
         }
@@ -276,6 +319,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
             TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
             ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
             titleBig.setText(list.get(0).getTitle());
+            setBigImgClick(bigImage, list.get(0).getDataId());
             list.remove(0);
             netAdapter.addHeaderView(header);
         }
@@ -293,6 +337,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
             TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
             ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
             titleBig.setText(list.get(0).getTitle());
+            setBigImgClick(bigImage, list.get(0).getDataId());
             list.remove(0);
             hkAdapter.addHeaderView(header);
         }
@@ -309,6 +354,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
             TextView titleBig = (TextView) header.findViewById(R.id.tv_home_movie_title_header);
             ILFactory.getLoader().loadNet(bigImage, list.get(0).getPic(), null);
             titleBig.setText(list.get(0).getTitle());
+            setBigImgClick(bigImage, list.get(0).getDataId());
             list.remove(0);
             hlwAdapter.addHeaderView(header);
         }
@@ -316,6 +362,16 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
         hlwAdapter.notifyDataSetChanged();
 
     }
+
+    private void setBigImgClick(ImageView img, final String dataId) {
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jumpMethod(dataId);
+            }
+        });
+    }
+
 
     @Override
     public int getLayoutId() {

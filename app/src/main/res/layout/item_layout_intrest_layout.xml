@@ -9,6 +9,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:scaleType="fitXY"
             android:id="@+id/iv_cover_middle_home"
             android:layout_gravity="center_horizontal"
             android:background="#e5e5e5"
