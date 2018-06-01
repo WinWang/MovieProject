@@ -1,5 +1,6 @@
 package com.lepoint.ljfmvp.ui.activity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.MovieAdapter;
 import com.lepoint.ljfmvp.adapter.MovieDetailAboutAdapter;
@@ -19,7 +21,9 @@ import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.VideoDetailBean;
 import com.lepoint.ljfmvp.present.VideoDetailPresent;
+import com.lepoint.ljfmvp.utils.DialogUtil;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
+import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
@@ -59,16 +63,47 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     private MovieDetailAdapter movieAdapter;
     private RecyclerView aboutRecycle;
     private MovieDetailAboutAdapter aboutAdapter;
+    private QMUITipDialog qmuiTipDialog;
 
     @Override
     public void initData(Bundle savedInstanceState) {
         mediaID = getIntent().getStringExtra("mediaID");
         initView();
+        initListener();
         getP().getVideoDetail(mediaID);
+        getP().getVideoAuth(mediaID);
+    }
+
+    private void initListener() {
+        aboutAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String dataId = aboutList.get(position).getDataId();
+                getP().getVideoDetail(dataId);
+            }
+        });
+
+        movieAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                if (qmuiTipDialog == null) {
+                    qmuiTipDialog = DialogUtil.showDialog(context);
+                } else {
+                    qmuiTipDialog.show();
+                }
+                String dataId = likeList.get(position).getDataId();
+                getP().getVideoAuth(dataId);
+                getP().getVideoDetail(dataId);
+            }
+        });
+
     }
 
     private void initView() {
+        JZVideoPlayer.FULLSCREEN_ORIENTATION = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;  //横向
+        JZVideoPlayer.NORMAL_ORIENTATION = ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT;  //纵向
         refreshVideoDetail.setEnableRefresh(false);
+        refreshVideoDetail.setEnableLoadMore(false);
         refreshVideoDetail.setEnableAutoLoadMore(false);
         rvVideoDetail.setLayoutManager(new LinearLayoutManager(context));
         videoCommentAdapter = new VideoCommentAdapter(R.layout.item_video_commen_layout, dataList);
@@ -126,6 +161,9 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     }
 
     public void setPlayData(VideoDetailBean.RetBean dataBean) {
+        if (qmuiTipDialog != null) {
+            qmuiTipDialog.dismiss();
+        }
         String smoothURL = dataBean.getSmoothURL();
         String sdurl = dataBean.getSDURL();
         String hdurl = dataBean.getHDURL();
@@ -148,9 +186,9 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         objects[0] = map;
         videoPlayer.setUp(objects, 0, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, title);
         videoPlayer.startVideo();
-        if(!TextUtils.isEmpty(dataBean.getRegion())||!TextUtils.isEmpty(dataBean.getVideoType())){
+        if (!TextUtils.isEmpty(dataBean.getRegion()) || !TextUtils.isEmpty(dataBean.getVideoType())) {
             videoTime.setText(dataBean.getAirTime() + " 丨 " + dataBean.getRegion() + " 丨 " + dataBean.getVideoType());
-        }else{
+        } else {
             videoTime.setText("");
         }
         videoDesc.setText("主演：" + dataBean.getActors() + "\n" +

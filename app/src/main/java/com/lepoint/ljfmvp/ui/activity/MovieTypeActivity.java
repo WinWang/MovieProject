@@ -2,9 +2,12 @@ package com.lepoint.ljfmvp.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.MovieAdapter;
 import com.lepoint.ljfmvp.adapter.MovieListAdapter;
@@ -13,12 +16,15 @@ import com.lepoint.ljfmvp.model.MovieListBean;
 import com.lepoint.ljfmvp.present.MovieTypePresent;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.droidlover.xdroidmvp.router.Router;
 
 public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
 
@@ -40,7 +46,37 @@ public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
         dataID = intent.getStringExtra("dataID");
         title = intent.getStringExtra("title");
         initView();
+        initListener();
         getP().getMovieList(dataID, pnum);
+
+    }
+
+    private void initListener() {
+        refreshMovieList.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
+            @Override
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
+                pnum++;
+                getP().getMovieList(dataID, pnum);
+            }
+
+            @Override
+            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
+                pnum = 1;
+                getP().getMovieList(dataID, pnum);
+            }
+        });
+
+        movieAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String Id = dataList.get(position).getDataId();
+                Router.newIntent(context)
+                        .to(VideoDetailActivity.class)
+                        .putString("mediaID", Id)
+                        .launch();
+            }
+        });
+
 
     }
 
@@ -52,8 +88,12 @@ public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
         rvMovieList.setAdapter(movieAdapter);
     }
 
-    public void setMovieData(List<MovieListBean.RetBean.ListBean> list ){
-        dataList.clear();
+    public void setMovieData(List<MovieListBean.RetBean.ListBean> list) {
+        refreshMovieList.finishLoadMore();
+        refreshMovieList.finishRefresh();
+        if (pnum == 1) {
+            dataList.clear();
+        }
         dataList.addAll(list);
         movieAdapter.notifyDataSetChanged();
     }

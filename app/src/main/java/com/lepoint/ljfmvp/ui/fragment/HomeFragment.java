@@ -21,7 +21,10 @@ import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.present.HomeFragPresent;
 import com.lepoint.ljfmvp.ui.activity.MovieTypeActivity;
+import com.lepoint.ljfmvp.ui.activity.NewsActivity;
+import com.lepoint.ljfmvp.ui.activity.SeachActivity;
 import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
+import com.lepoint.ljfmvp.ui.activity.VideoHistoryActivity;
 import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -206,11 +209,20 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
                 if (!TextUtils.isEmpty(dataId)) {
                     Router.newIntent(context).to(MovieTypeActivity.class)
                             .putString("dataID", dataId)
-                            .putString("title",title)
+                            .putString("title", title)
                             .launch();
-                }else {
+                } else {
                     getvDelegate().toastShort("暂不支持，敬请期待");
                 }
+            }
+        });
+
+        movieNewsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String loadURL = movieNewsList.get(position).getLoadURL();
+                String title = movieNewsList.get(position).getTitle();
+                Router.newIntent(context).putString("title", title).putString("url", loadURL).to(NewsActivity.class).launch();
             }
         });
 
@@ -388,10 +400,10 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.qmrl_home_seach://首页搜索
-
+                Router.newIntent(context).to(SeachActivity.class).launch();
                 break;
             case R.id.iv_home_history: //首页历史纪录
-
+                Router.newIntent(context).to(VideoHistoryActivity.class).launch();
                 break;
         }
     }

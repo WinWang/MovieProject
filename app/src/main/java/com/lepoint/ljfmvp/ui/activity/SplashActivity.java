@@ -2,31 +2,34 @@ package com.lepoint.ljfmvp.ui.activity;
 
 import android.Manifest;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
-import com.lepoint.ljfmvp.utils.ToastUtil;
-import com.tbruyelle.rxpermissions2.Permission;
+import com.lepoint.ljfmvp.utils.AppManager;
+import com.zhy.autolayout.AutoLinearLayout;
 
 import java.util.concurrent.TimeUnit;
 
-import cn.droidlover.xdroidmvp.net.XApi;
+import butterknife.BindView;
+import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.router.Router;
 import io.reactivex.Flowable;
-import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.subscribers.ResourceSubscriber;
 
 public class SplashActivity extends BaseActivity {
 
+
+    @BindView(R.id.tv_splash_second)
+    TextView tvSplashSecond;
+    @BindView(R.id.all_splash_button)
+    AutoLinearLayout allSplashButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,6 +76,7 @@ public class SplashActivity extends BaseActivity {
                 }).subscribe(new ResourceSubscriber<Long>() {
             @Override
             public void onNext(Long aLong) {
+                tvSplashSecond.setText(aLong-1 + "s");
                 if (aLong == 1) {
                     Router.newIntent(SplashActivity.this)
                             .to(HomeActivity.class)
@@ -103,5 +107,11 @@ public class SplashActivity extends BaseActivity {
     @Override
     public Object newP() {
         return null;
+    }
+
+    @OnClick(R.id.all_splash_button)
+    public void onClick() {
+        Router.newIntent(context).to(HomeActivity.class).launch();
+        AppManager.getAppManager().finishActivity();
     }
 }

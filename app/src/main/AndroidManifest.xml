@@ -80,7 +80,12 @@
             android:name=".ui.activity.VideoDetailActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.activity.MovieTypeActivity"></activity>
+        <activity
+            android:name=".ui.activity.MovieTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.VideoHistoryActivity" />
+        <activity android:name=".ui.activity.SeachActivity" />
+        <activity android:name=".ui.activity.NewsActivity"></activity>
     </application>
 
 </manifest>

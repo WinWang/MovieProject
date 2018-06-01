@@ -5,22 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.MovieTypeActivity">
-
-    <com.qmuiteam.qmui.widget.QMUITopBar
-        android:id="@+id/qm_topbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/qmui_topbar_height"
-        app:qmui_topbar_title_color="@color/black"></com.qmuiteam.qmui.widget.QMUITopBar>
+    tools:context=".ui.activity.SeachActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120px"
         android:background="#fff">
 
+        <ImageView
+            android:id="@+id/seach_back"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:padding="30px"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
         <com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout
             android:id="@+id/qmrl_home_seach"
-            android:layout_width="1000px"
+            android:layout_width="785px"
             android:layout_height="86px"
             android:layout_centerInParent="true"
             app:qmui_backgroundColor="#ededed"
@@ -35,40 +36,31 @@
                 android:padding="5px"
                 android:src="@mipmap/search_sel" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/edit_seach"
+                android:layout_width="600px"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
                 android:layout_toRightOf="@+id/iv_home_seach"
-                android:text="复仇者联盟3"
-                android:textColor="#9b9b9b" />
+                android:background="@null"
+                android:singleLine="true" />
 
         </com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#bfbfbf"
-            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/tv_seach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:padding="10px"
+            android:text="搜索" />
+
 
     </RelativeLayout>
-
-
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:layout_marginTop="20px"
-        android:id="@+id/refresh_movie_list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_movie_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
 </LinearLayout>

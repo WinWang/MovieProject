@@ -1,8 +1,10 @@
 package com.lepoint.ljfmvp.http;
 
 import com.lepoint.ljfmvp.model.BannerBean;
+import com.lepoint.ljfmvp.model.BaseModel;
 import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
+import com.lepoint.ljfmvp.model.HistoryListBean;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.MovieListBean;
@@ -63,6 +65,13 @@ public interface ApiService {
     @GET("front/videoDetailApi/videoDetail.do")
     Flowable<VideoDetailBean> getVideoDetail(@Query("mediaId") String mediaId, @Query("deviceId") String deviceId);
 
+    //视频鉴权认证
+    @GET("front/member/auth.do")
+    Flowable<BaseModel> getVideoAuth(@Query("mediaId") String mediaId, @Query("deviceId") String deviceId);
+
+    @FormUrlEncoded
+    @POST("front/playRecordApi/add.do?deviceSysVersion=4.4.2&appVersion=6.3.4&deviceModel=Nexus%206&deviceManufacturer=motorola&deviceId=863064010156927&appId=shoujimovie&deviceSysType=ANDROID&appChannel=tengxun&appCode=634&userId=&locationId=11&mac=08:00:27:59:a5:f5&lat=&lng=")
+    Flowable<BaseModel> addVideoList(@Field("mediaId") String mediaId);
 
     //获取发现的表头数据
     @GET("front/find/findMoviePage.do")
@@ -72,9 +81,22 @@ public interface ApiService {
     @GET("front/find/findPageInfoMsg.do")
     Flowable<FindNewsBean> getFindNews(@Query("pnum") int pnum);
 
+    //获取视频列表
     @FormUrlEncoded
-    @POST("front/columns/getVideoList.do?deviceSysVersion=4.4.2&appVersion=6.3.4&deviceModel=Nexus%206&deviceManufacturer=motorola&deviceId=352284043595770&appId=shoujimovie&deviceSysType=ANDROID&appChannel=tengxun&appCode=634&userId=&locationId=11&mac=08:00:27:59:a5:f5&lat=&lng=")
+    @POST("front/columns/getVideoList.do?deviceSysVersion=4.4.2&appVersion=6.3.4&deviceModel=Nexus%206&deviceManufacturer=motorola&deviceId=863064010156927&appId=shoujimovie&deviceSysType=ANDROID&appChannel=tengxun&appCode=634&userId=&locationId=11&mac=08:00:27:59:a5:f5&lat=&lng=")
     Flowable<MovieListBean> getMovieList(@Field("catalogId") String dataId, @Field("information") String infomation, @Field("pnum") int pnum);
+
+
+    //获取播放历史记录
+    @FormUrlEncoded
+    @POST("front/playRecordApi/loadRecordList.do")
+    Flowable<HistoryListBean> getHistoryList(@Field("deviceId") String deviceId, @Field("pnum") int pageNum);
+
+
+    //删除观影记录
+    @FormUrlEncoded
+    @POST("http://api.svipmovie.com/front/playRecordApi/deleteAll.do")
+    Flowable<BaseModel> deleteHistory(@Field("deviceId") String deviceId);
 
 
 }

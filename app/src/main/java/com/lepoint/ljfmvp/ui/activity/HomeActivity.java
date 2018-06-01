@@ -5,12 +5,14 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.ui.fragment.FindFragment;
 import com.lepoint.ljfmvp.ui.fragment.HomeFragment;
+import com.lepoint.ljfmvp.utils.AppManager;
 import com.lepoint.ljfmvp.utils.BottomNavigationViewHelper;
 
 import java.util.ArrayList;
@@ -118,5 +120,28 @@ public class HomeActivity extends BaseActivity {
     public Object newP() {
         return null;
     }
+
+
+    //退出时的时间
+    private long mExitTime;
+    //对返回键进行监听
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            exit();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - mExitTime) > 2000) {
+            getvDelegate().toastShort("再按一次退出电影无极限");
+            mExitTime = System.currentTimeMillis();
+        } else {
+            AppManager.getAppManager().AppExit(context);
+        }
+    }
+
 
 }

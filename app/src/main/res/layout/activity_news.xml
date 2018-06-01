@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.NewsActivity">
+
+    <include layout="@layout/layout_head_top_bar" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_news"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/web_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></WebView>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progressbar"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_gravity="center"
+                app:indicator="LineScaleParty"
+                app:indicator_color="@color/colorPrimary" />
+
+        </FrameLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

@@ -24,12 +24,13 @@
         android:layout_height="140px">
 
         <TextView
+            android:singleLine="true"
             android:id="@+id/tv_video_detail_title"
-            android:layout_width="wrap_content"
+            android:layout_width="600px"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40px"
-            android:text="dddd"
+            android:text=""
             android:textColor="#000"
             android:textSize="44px" />
 
@@ -40,7 +41,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="190px"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@mipmap/ic_share" />
 
         <ImageView
             android:id="@+id/iv_collect_video_detail"
@@ -49,7 +50,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="40px"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@mipmap/ic_collection" />
 
     </RelativeLayout>
 

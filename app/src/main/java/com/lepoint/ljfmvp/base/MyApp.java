@@ -32,8 +32,9 @@ public class MyApp extends Application {
         mContext = this;
         AutoLayoutConifg.getInstance().useDeviceSize();
         registerProvider();
-        LeakCanary.install(this);
+//        LeakCanary.install(this);
         XDroidConf.devMode(true);
+//        XDroidConf.LOG = false;
     }
 
 
