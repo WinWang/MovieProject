@@ -8,6 +8,7 @@ import com.lepoint.ljfmvp.model.HistoryListBean;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.MovieListBean;
+import com.lepoint.ljfmvp.model.StoryListBean;
 import com.lepoint.ljfmvp.model.TokenBean;
 import com.lepoint.ljfmvp.model.UpdateBean;
 import com.lepoint.ljfmvp.model.VideoDetailBean;
@@ -97,6 +98,9 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("http://api.svipmovie.com/front/playRecordApi/deleteAll.do")
     Flowable<BaseModel> deleteHistory(@Field("deviceId") String deviceId);
+
+    @GET("StoryBook/GetMagazine.ashx")
+    Flowable<StoryListBean> getStoryList(@Query("MagazineType") int type, @Query("nowpage") int pnum);
 
 
 }

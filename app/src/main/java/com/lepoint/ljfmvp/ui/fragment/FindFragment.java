@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +20,7 @@ import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.present.FindPresent;
 import com.lepoint.ljfmvp.widget.GalleryRecyclerView;
+import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
@@ -26,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
@@ -34,6 +38,8 @@ public class FindFragment extends XLazyFragment<FindPresent> {
     RecyclerView rvFind;
     @BindView(R.id.refresh_find_layout)
     public SmartRefreshLayout refreshFindLayout;
+    @BindView(R.id.empty_loading_layout)
+    public QMUIEmptyView emptyLoadingLayout;
     private ArrayList<FindHeaderBean.RetBean.BannerListBean> bannerList = new ArrayList<>();
     private ArrayList<FindNewsBean.RetBean.FindListBean> newsList = new ArrayList<>();
     private FindHeaderGalleryAdapter galleryAdapter;
@@ -137,7 +143,7 @@ public class FindFragment extends XLazyFragment<FindPresent> {
 
     public void setFindListData(List<FindNewsBean.RetBean.FindListBean> list) {
         if (refreshTag) {
-            refreshFindLayout.finishRefresh();
+            refreshFindLayout.finishRefresh(1000);
             newsList.clear();
         } else {
             refreshFindLayout.finishLoadMore();

@@ -12,6 +12,7 @@ import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.ui.fragment.FindFragment;
 import com.lepoint.ljfmvp.ui.fragment.HomeFragment;
+import com.lepoint.ljfmvp.ui.fragment.StoryFragment;
 import com.lepoint.ljfmvp.utils.AppManager;
 import com.lepoint.ljfmvp.utils.BottomNavigationViewHelper;
 
@@ -100,11 +101,11 @@ public class HomeActivity extends BaseActivity {
 
     private void setHomeVpAdapter() {
         HomeFragment homeFragment = new HomeFragment();
-        FindFragment findFragment = new FindFragment();
+        StoryFragment storyFragment = new StoryFragment();
         FindFragment findFragment1 = new FindFragment();
         FindFragment findFragment2 = new FindFragment();
         fragmentList.add(homeFragment);
-        fragmentList.add(findFragment);
+        fragmentList.add(storyFragment);
         fragmentList.add(findFragment1);
         fragmentList.add(findFragment2);
         XFragmentAdapter xFragmentAdapter = new XFragmentAdapter(getSupportFragmentManager(), fragmentList, null);

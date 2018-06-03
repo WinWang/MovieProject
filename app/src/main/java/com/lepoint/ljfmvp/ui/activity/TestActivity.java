@@ -29,17 +29,17 @@ public class TestActivity extends BaseActivity {
         topBar.setTitle("测试界面");
         JSONObject json = new JSONObject();
         json.put("position", 3);
-        HttpUtils.getInstance().getNetData(context, true, json, URLConfig.BASE_API_URL, URLConfig.QUERYADVERTISMENT, new HttpUtils.NetCallBack() {
-            @Override
-            public void onSuccess(String msg) {
-
-            }
-
-            @Override
-            public void onFailed(Throwable t) {
-
-            }
-        });
+//        HttpUtils.getInstance().getNetData(context, true, json, URLConfig.BASE_API_URL, URLConfig.QUERYADVERTISMENT, new HttpUtils.NetCallBack() {
+//            @Override
+//            public void onSuccess(String msg) {
+//
+//            }
+//
+//            @Override
+//            public void onFailed(Throwable t) {
+//
+//            }
+//        });
 
         Intent intent = getIntent();
         intent.putExtra("mark", "A");

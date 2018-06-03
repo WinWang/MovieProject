@@ -72,14 +72,13 @@ public class AutoLayoutConifg {
         int width = screenSize[0];
         mScreenWidth = screenSize[0];
         int height = screenSize[1];
-        mScreenHeight = height;
-        //        float scale = height / width;
-        //        float ruleScale = 1920 / 1080f;
-        //        if (scale > ruleScale) { //此时走的是长屏方案
-        //            mScreenHeight = (int) (mScreenWidth * ruleScale);
-        //        } else {  //原始方案
-        //            mScreenHeight = screenSize[1];
-        //        }
+        float scale = height / width;
+        float ruleScale = 1920 / 1080f;
+        if (scale > ruleScale) { //此时走的是长屏方案
+            mScreenHeight = (int) (mScreenWidth * ruleScale);
+        } else {  //原始方案
+            mScreenHeight = screenSize[1];
+        }
         L.e(" screenWidth =" + mScreenWidth + " ,screenHeight = " + mScreenHeight + ">>>range");
     }
 

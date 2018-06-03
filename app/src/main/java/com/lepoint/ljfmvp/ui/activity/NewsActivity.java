@@ -1,13 +1,23 @@
 package com.lepoint.ljfmvp.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
+import com.wang.avi.AVLoadingIndicatorView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class NewsActivity extends BaseActivity {
 
+
+    @BindView(R.id.web_news)
+    WebView webNews;
+    @BindView(R.id.progressbar)
+    AVLoadingIndicatorView progressbar;
 
     @Override
     public void initData(Bundle savedInstanceState) {
@@ -17,6 +27,8 @@ public class NewsActivity extends BaseActivity {
     private void initView() {
         String title = getIntent().getStringExtra("title");
         topBar.setTitle(title);
+        WebSettings settings = webNews.getSettings();
+//        settings.get
     }
 
     @Override
@@ -28,4 +40,5 @@ public class NewsActivity extends BaseActivity {
     public Object newP() {
         return null;
     }
+
 }

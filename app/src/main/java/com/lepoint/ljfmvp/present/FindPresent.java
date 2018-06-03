@@ -1,5 +1,7 @@
 package com.lepoint.ljfmvp.present;
 
+import android.view.View;
+
 import com.lepoint.ljfmvp.base.BasePresent;
 import com.lepoint.ljfmvp.http.RetrofitManager;
 import com.lepoint.ljfmvp.http.URLConfig;
@@ -30,6 +32,8 @@ public class FindPresent extends BasePresent<FindFragment> {
                     @Override
                     protected void onSuccess(FindHeaderBean findHeaderBean) {
                         if (findHeaderBean.getCode() == 200) {
+                            getV().emptyLoadingLayout.hide();
+                            getV().refreshFindLayout.setVisibility(View.VISIBLE);
                             FindHeaderBean.RetBean ret = findHeaderBean.getRet();
                             List<FindHeaderBean.RetBean.BannerListBean> bannerList = ret.getBannerList();
                             if (bannerList != null && bannerList.size() > 0) {

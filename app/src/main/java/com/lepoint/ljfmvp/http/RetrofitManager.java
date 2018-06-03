@@ -1,5 +1,6 @@
 package com.lepoint.ljfmvp.http;
 
+import cn.droidlover.xdroidmvp.net.NetProvider;
 import cn.droidlover.xdroidmvp.net.XApi;
 
 public class RetrofitManager {
@@ -10,16 +11,9 @@ public class RetrofitManager {
     private ApiService apiService;
 
     public ApiService getApiService(String BASE_URL) {
-        if (apiService == null) {
-            synchronized (HttpUtils.class) {
-                if (apiService == null) {
-                    apiService = XApi.getInstance().getRetrofit(BASE_URL + "/", true).create(ApiService.class);
-                }
-            }
-        }
+        apiService = XApi.getInstance().getRetrofit(BASE_URL + "/", true).create(ApiService.class);
         return apiService;
     }
-
 
     /**
      * HttpUtil实例

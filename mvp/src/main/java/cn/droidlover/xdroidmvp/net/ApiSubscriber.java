@@ -27,13 +27,13 @@ public abstract class ApiSubscriber<T extends IModel> extends ResourceSubscriber
         if (e != null) {
             if (!(e instanceof NetError)) {
                 if (e instanceof UnknownHostException) {
-                    error = new NetError(e, NetError.NoConnectError);
+                    error = new NetError("网络异常", NetError.NoConnectError);
                 } else if (e instanceof JSONException
                         || e instanceof JsonParseException
                         || e instanceof JsonSyntaxException) {
-                    error = new NetError(e, NetError.ParseError);
+                    error = new NetError("数据解析异常", NetError.ParseError);
                 } else {
-                    error = new NetError(e, NetError.OtherError);
+                    error = new NetError("数据异常", NetError.OtherError);
                 }
             } else {
                 error = (NetError) e;

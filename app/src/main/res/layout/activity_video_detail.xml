@@ -7,6 +7,9 @@
     android:orientation="vertical"
     tools:context=".ui.activity.VideoDetailActivity">
 
+    <include layout="@layout/layout_head_top_bar" />
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="612px">
@@ -20,16 +23,17 @@
 
 
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="140px">
 
         <TextView
-            android:singleLine="true"
             android:id="@+id/tv_video_detail_title"
             android:layout_width="600px"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40px"
+            android:singleLine="true"
             android:text=""
             android:textColor="#000"
             android:textSize="44px" />

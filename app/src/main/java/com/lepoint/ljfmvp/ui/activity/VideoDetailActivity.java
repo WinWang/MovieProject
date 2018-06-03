@@ -105,6 +105,12 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         refreshVideoDetail.setEnableRefresh(false);
         refreshVideoDetail.setEnableLoadMore(false);
         refreshVideoDetail.setEnableAutoLoadMore(false);
+        topBar.addRightImageButton(R.mipmap.ic_collection,R.id.topbar_right_change_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getvDelegate().toastShort("暂未开启，尽情期待");
+            }
+        });
         rvVideoDetail.setLayoutManager(new LinearLayoutManager(context));
         videoCommentAdapter = new VideoCommentAdapter(R.layout.item_video_commen_layout, dataList);
         View header = View.inflate(context, R.layout.header_video_detail_layout, null);
@@ -169,7 +175,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         String hdurl = dataBean.getHDURL();
         String ultraClearURL = dataBean.getUltraClearURL();
         String title = dataBean.getTitle();
-        tvVideoDetailTitle.setText(title);
+        topBar.setTitle(title);
         //播放带清晰度的视频
         LinkedHashMap map = new LinkedHashMap();
         map.put("流畅", smoothURL);

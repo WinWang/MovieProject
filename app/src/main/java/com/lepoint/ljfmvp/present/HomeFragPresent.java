@@ -1,6 +1,7 @@
 package com.lepoint.ljfmvp.present;
 
 import android.content.Context;
+import android.view.View;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lepoint.ljfmvp.base.BasePresent;
@@ -28,10 +29,8 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
 
     /**
      * 获取首页列表信息
-     *
-     * @param context
      */
-    public void getHomeListData(Context context) {
+    public void getHomeListData() {
         RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHomeList()
                 .compose(XApi.<HomeListBean>getApiTransformer())
                 .compose(XApi.<HomeListBean>getScheduler())
@@ -40,12 +39,21 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                     @Override
                     protected void onFail(NetError error) {
                         getV().refreshHome.finishRefresh();
+                        getV().qmuiEmpty.show(false, error.getMessage(), null, "点击重新加载", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                getHomeListData();
+                                getHomeChannel();
+                            }
+                        });
                     }
 
                     @Override
                     protected void onSuccess(HomeListBean homeListBean) {
-                        getV().refreshHome.finishRefresh();
+                        getV().refreshHome.finishRefresh(1000);
                         if (homeListBean.getCode() == 200) {
+                            getV().qmuiEmpty.show();
+                            getV().refreshHome.setVisibility(View.VISIBLE);
                             HomeListBean.RetBean ret = homeListBean.getRet();
                             List<HomeListBean.RetBean.HotSearchListBean> hotSearchList = ret.getHotSearchList();
                             List<HomeListBean.RetBean.ListBean> list = ret.getList();
@@ -58,7 +66,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                                     bannerList.add(bean.getPic());
                                     titleList.add(bean.getTitle());
                                 }
-                                getV().setBannerData(bannerList, titleList,childList);
+                                getV().setBannerData(bannerList, titleList, childList);
                                 //免费推荐
                                 List<HomeListBean.RetBean.ListBean.ChildListBean> freeList = list.get(1).getChildList();
                                 getV().setFreeRecommonedData(freeList);
@@ -104,10 +112,8 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
 
     /**
      * 获取首页分类列表
-     *
-     * @param context
      */
-    public void getHomeChannel(Context context) {
+    public void getHomeChannel() {
         RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHomeChannel()
                 .compose(XApi.<HomeChannelBean>getApiTransformer())
                 .compose(XApi.<HomeChannelBean>getScheduler())
@@ -120,7 +126,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
 
                     @Override
                     protected void onSuccess(HomeChannelBean channelBean) {
-                        getV().refreshHome.finishRefresh();
+//                        getV().refreshHome.finishRefresh();
                         if (channelBean.getCode() == 200) {
                             HomeChannelBean.RetBean ret = channelBean.getRet();
                             List<HomeChannelBean.RetBean.ColumnListBean> columnList = ret.getColumnList();

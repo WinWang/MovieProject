@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MovieProject.iml" filepath="$PROJECT_DIR$/.idea/MovieProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ljfmvp-master.iml" filepath="$PROJECT_DIR$/ljfmvp-master.iml" />
+      <module fileurl="file://F:\AndroidProject\PracticeProject\MovieProject\ljfmvp-master.iml" filepath="F:\AndroidProject\PracticeProject\MovieProject\ljfmvp-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
     </modules>
   </component>

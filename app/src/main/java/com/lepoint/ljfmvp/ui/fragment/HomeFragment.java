@@ -6,7 +6,9 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +28,7 @@ import com.lepoint.ljfmvp.ui.activity.SeachActivity;
 import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
 import com.lepoint.ljfmvp.ui.activity.VideoHistoryActivity;
 import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
-import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout;
+import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -38,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.imageloader.ILFactory;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
@@ -71,6 +74,8 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> hlwList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     ArrayList<HomeListBean.RetBean.ListBean.ChildListBean> netList = new ArrayList<HomeListBean.RetBean.ListBean.ChildListBean>();
     List<HomeListBean.RetBean.ListBean.ChildListBean> bannerList = null;
+    @BindView(R.id.qmui_empty)
+    public QMUIEmptyView qmuiEmpty;
     private HomeAdapter homeAdapter;
     private Banner banner;
     private HomeChannelAdapter homeChannelAdapter;
@@ -88,8 +93,8 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
     public void initData(Bundle savedInstanceState) {
         initView();
         initListener();
-        getP().getHomeListData(context);
-        getP().getHomeChannel(context);
+        getP().getHomeListData();
+        getP().getHomeChannel();
     }
 
     private void initView() {
@@ -410,7 +415,8 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        getP().getHomeChannel(context);
-        getP().getHomeListData(context);
+        getP().getHomeChannel();
+        getP().getHomeListData();
     }
+
 }

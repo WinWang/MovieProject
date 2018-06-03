@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="365px">
+
+        <ImageView
+            android:id="@+id/iv_cover_story_down"
+            android:layout_width="227px"
+            android:layout_height="304px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            />
+
+        <TextView
+            android:id="@+id/tv_title_story_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310px"
+            android:layout_marginTop="31px"
+            android:singleLine="true"
+            android:text="sdfasdfa"
+            android:textColor="#636363"
+            android:textSize="53px" />
+
+        <TextView
+            android:id="@+id/tv_time_story_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310px"
+            android:layout_marginTop="108px"
+            android:singleLine="true"
+            android:text="sdfasdssdffa"
+            android:textColor="#999999"
+            android:textSize="30px" />
+
+
+        <TextView
+            android:id="@+id/tv_persion_story_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310px"
+            android:layout_marginTop="186px"
+            android:singleLine="true"
+            android:text="sdfasdfa"
+            android:textColor="#999999"
+            android:textSize="38px" />
+
+        <TextView
+            android:lineSpacingExtra="5px"
+            android:id="@+id/tv_desc_story_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310px"
+            android:layout_marginTop="230px"
+            android:maxLines="2"
+            android:text="sdfasdfa"
+            android:textColor="#999999"
+            android:textSize="38px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="40px"
+            android:background="#bfbfbf" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

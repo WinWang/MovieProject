@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.utils.AppManager;
+import com.trello.rxlifecycle2.android.ActivityEvent;
 import com.zhy.autolayout.AutoLinearLayout;
 
 import java.util.concurrent.TimeUnit;
@@ -18,9 +19,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.router.Router;
 import io.reactivex.Flowable;
+import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subscribers.ResourceSubscriber;
 
 public class SplashActivity extends BaseActivity {
@@ -56,7 +59,8 @@ public class SplashActivity extends BaseActivity {
                         if (aBoolean) {
                             startJump();
                         } else {
-
+                            getPerssion();
+                            getvDelegate().toastShort("亲，同意了权限才能更好的使用软件哦");
                         }
                     }
                 });
@@ -64,8 +68,8 @@ public class SplashActivity extends BaseActivity {
 
     private void startJump() {
         Flowable.interval(1, 1, TimeUnit.SECONDS)
-                .compose(this.<Long>bindToLifecycle())
-                .subscribeOn(AndroidSchedulers.mainThread())
+                .compose(this.<Long>bindUntilEvent(ActivityEvent.DESTROY))
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(new Function<Long, Long>() {
 
@@ -76,7 +80,7 @@ public class SplashActivity extends BaseActivity {
                 }).subscribe(new ResourceSubscriber<Long>() {
             @Override
             public void onNext(Long aLong) {
-                tvSplashSecond.setText(aLong-1 + "s");
+                tvSplashSecond.setText(aLong - 1 + "s");
                 if (aLong == 1) {
                     Router.newIntent(SplashActivity.this)
                             .to(HomeActivity.class)

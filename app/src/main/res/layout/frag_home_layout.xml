@@ -1,73 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
     <RelativeLayout
-        android:background="#fff"
         android:layout_width="match_parent"
-        android:layout_height="120px">
+        android:layout_height="120px"
+        android:background="#fff">
 
         <ImageView
-            android:padding="30px"
             android:layout_width="120px"
             android:layout_height="120px"
-            android:src="@mipmap/icon_home_left"
-            />
+            android:padding="30px"
+            android:src="@mipmap/icon_home_left" />
 
         <com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout
             android:id="@+id/qmrl_home_seach"
-            android:layout_centerInParent="true"
             android:layout_width="785px"
+            android:layout_height="86px"
+            android:layout_centerInParent="true"
             app:qmui_backgroundColor="#ededed"
-            app:qmui_borderColor="@color/qmui_s_transparent"
-            android:layout_height="86px">
+            app:qmui_borderColor="@color/qmui_s_transparent">
 
             <ImageView
-                android:padding="5px"
-                android:layout_marginLeft="40px"
                 android:id="@+id/iv_home_seach"
-                android:layout_centerVertical="true"
                 android:layout_width="50px"
                 android:layout_height="50px"
-                android:src="@mipmap/search_sel"/>
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40px"
+                android:padding="5px"
+                android:src="@mipmap/search_sel" />
 
             <TextView
-                android:layout_marginLeft="20px"
-                android:layout_toRightOf="@+id/iv_home_seach"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:textColor="#9b9b9b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="复仇者联盟3"/>
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@+id/iv_home_seach"
+                android:text="复仇者联盟3"
+                android:textColor="#9b9b9b" />
 
         </com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout>
 
 
         <ImageView
             android:id="@+id/iv_home_history"
-            android:layout_marginRight="10px"
-            android:layout_alignParentRight="true"
-            android:padding="10px"
             android:layout_width="120px"
             android:layout_height="120px"
-            android:src="@mipmap/history_nor"
-            />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10px"
+            android:padding="10px"
+            android:src="@mipmap/history_nor" />
 
 
     </RelativeLayout>
 
 
+    <com.qmuiteam.qmui.widget.QMUIEmptyView
+        android:id="@+id/qmui_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:qmui_show_loading="true" />
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refresh_home"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_home_list"
@@ -75,4 +79,6 @@
             android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
 </LinearLayout>
