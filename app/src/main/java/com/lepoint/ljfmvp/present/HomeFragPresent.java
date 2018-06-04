@@ -39,7 +39,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                     @Override
                     protected void onFail(NetError error) {
                         getV().refreshHome.finishRefresh();
-                        getV().qmuiEmpty.show(false, error.getMessage(), null, "点击重新加载", new View.OnClickListener() {
+                        getV().qmuiEmpty.show(false, error.getMessage(), null, "点击重试", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 getHomeListData();

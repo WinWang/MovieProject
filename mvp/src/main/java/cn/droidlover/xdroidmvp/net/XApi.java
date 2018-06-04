@@ -201,7 +201,6 @@ public class XApi {
                 return upstream.flatMap(new Function<T, Publisher<T>>() {
                     @Override
                     public Publisher<T> apply(T model) throws Exception {
-
                         if (model == null || model.isNull()) {
                             return Flowable.error(new NetError(model.getErrorMsg(), NetError.NoDataError));
                         } else if (model.isAuthError()) {
@@ -216,6 +215,8 @@ public class XApi {
             }
         };
     }
+
+
 
 
 }

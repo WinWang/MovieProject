@@ -16,6 +16,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.FindHeaderGalleryAdapter;
 import com.lepoint.ljfmvp.adapter.FindNewsAdapter;
+import com.lepoint.ljfmvp.base.BaseLazyFragment;
 import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.present.FindPresent;
@@ -33,7 +34,7 @@ import butterknife.ButterKnife;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
-public class FindFragment extends XLazyFragment<FindPresent> {
+public class FindFragment extends BaseLazyFragment<FindPresent> {
     @BindView(R.id.rv_find)
     RecyclerView rvFind;
     @BindView(R.id.refresh_find_layout)
@@ -55,6 +56,11 @@ public class FindFragment extends XLazyFragment<FindPresent> {
     public void initData(Bundle savedInstanceState) {
         initView();
         initListener();
+        getNetData();
+    }
+
+    @Override
+    public void getNetData() {
         getP().getHeaderData();
         getP().getFindNewsData(pageNum);
     }
@@ -73,7 +79,6 @@ public class FindFragment extends XLazyFragment<FindPresent> {
                 pageNum = 1;
                 refreshTag = true;
                 getP().getFindNewsData(pageNum);
-//                getP().getHeaderData();
             }
         });
 
@@ -132,6 +137,7 @@ public class FindFragment extends XLazyFragment<FindPresent> {
         bannerList.clear();
         bannerList.addAll(list);
         galleryAdapter.notifyDataSetChanged();
+        bannerRv.setSelectPosition(0);
         Glide.with(context).load(bannerList.get(0).getPic())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .bitmapTransform(new BlurTransformation(context, 25, 3))

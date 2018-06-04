@@ -102,5 +102,4 @@ public interface ApiService {
     @GET("StoryBook/GetMagazine.ashx")
     Flowable<StoryListBean> getStoryList(@Query("MagazineType") int type, @Query("nowpage") int pnum);
 
-
 }

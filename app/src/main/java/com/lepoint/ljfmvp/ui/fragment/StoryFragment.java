@@ -10,6 +10,7 @@ import android.view.View;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.StoryAdapterHead;
 import com.lepoint.ljfmvp.adapter.StoryAdapterOuter;
+import com.lepoint.ljfmvp.base.BaseLazyFragment;
 import com.lepoint.ljfmvp.model.StoryListBean;
 import com.lepoint.ljfmvp.present.StoryPresent;
 import com.qmuiteam.qmui.widget.QMUIEmptyView;
@@ -27,7 +28,7 @@ import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
  * Created by Administrator on 2018/6/3 0003.
  */
 
-public class StoryFragment extends XLazyFragment<StoryPresent> {
+public class StoryFragment extends BaseLazyFragment<StoryPresent> {
     @BindView(R.id.empty_loading_layout)
     public QMUIEmptyView emptyLoadingLayout;
     @BindView(R.id.rv_story)
@@ -43,8 +44,14 @@ public class StoryFragment extends XLazyFragment<StoryPresent> {
 
     @Override
     public void initData(Bundle savedInstanceState) {
+        super.initData(savedInstanceState);
         initView();
         initListener();
+        getNetData();
+    }
+
+    @Override
+    public void getNetData() {
         getP().getStoryList(pageNum);
         getP().getStoryListHead();
     }
@@ -83,6 +90,7 @@ public class StoryFragment extends XLazyFragment<StoryPresent> {
 
     public void setDataList(List<StoryListBean.BooklistBean> list) {
         if (tag) {
+            refreshStory.finishRefresh(1000);
             dataList.clear();
         } else {
             refreshStory.finishLoadMore();

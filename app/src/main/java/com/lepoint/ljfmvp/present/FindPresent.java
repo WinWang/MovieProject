@@ -10,11 +10,16 @@ import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.ui.fragment.FindFragment;
 
+import org.reactivestreams.Publisher;
+
 import java.util.List;
 
 import cn.droidlover.xdroidmvp.net.ApiSubscriber;
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.XApi;
+import io.reactivex.Flowable;
+import io.reactivex.Observable;
+import io.reactivex.functions.Function;
 
 public class FindPresent extends BasePresent<FindFragment> {
 
@@ -23,6 +28,12 @@ public class FindPresent extends BasePresent<FindFragment> {
                 .compose(XApi.<FindHeaderBean>getApiTransformer())
                 .compose(XApi.<FindHeaderBean>getScheduler())
                 .compose(getV().<FindHeaderBean>bindToLifecycle())
+                .retryWhen(new Function<Flowable<Throwable>, Publisher<?>>() {
+                    @Override
+                    public Publisher<?> apply(Flowable<Throwable> throwableFlowable) throws Exception {
+                        return null;
+                    }
+                })
                 .subscribe(new ApiSubscriber<FindHeaderBean>() {
                     @Override
                     protected void onFail(NetError error) {
