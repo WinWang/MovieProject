@@ -16,7 +16,7 @@
             android:id="@+id/seach_back"
             android:layout_width="120px"
             android:layout_height="120px"
-            android:padding="30px"
+            android:padding="10px"
             android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
         <com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout
