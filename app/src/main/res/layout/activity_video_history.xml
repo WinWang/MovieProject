@@ -9,6 +9,7 @@
 
     <include layout="@layout/layout_head_top_bar"/>
 
+    <include layout="@layout/empty_loading_layout"/>
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:layout_width="match_parent"

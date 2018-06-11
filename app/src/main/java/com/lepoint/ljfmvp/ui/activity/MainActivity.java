@@ -172,6 +172,11 @@ public class MainActivity extends BaseActivity<MainPresent> {
         XLog.e("执行这条语句");
     }
 
+    @Override
+    public void getNetData() {
+
+    }
+
     @Subscribe(threadMode = ThreadMode.POSTING)
     public void notifyData(HomeFragEvent event) {
         System.out.println("测试>>>>>");

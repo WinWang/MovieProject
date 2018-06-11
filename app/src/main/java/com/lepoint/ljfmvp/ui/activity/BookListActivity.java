@@ -23,4 +23,9 @@ public class BookListActivity extends BaseActivity {
     public Object newP() {
         return null;
     }
+
+    @Override
+    public void getNetData() {
+
+    }
 }

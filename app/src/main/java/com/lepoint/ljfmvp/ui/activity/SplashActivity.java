@@ -44,6 +44,11 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
+    public void getNetData() {
+
+    }
+
+    @Override
     public void initData(Bundle savedInstanceState) {
         getPerssion();
     }

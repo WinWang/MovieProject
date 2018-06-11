@@ -73,4 +73,8 @@ public class TestActivity extends BaseActivity {
         return null;
     }
 
+    @Override
+    public void getNetData() {
+
+    }
 }

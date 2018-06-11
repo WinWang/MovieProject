@@ -24,11 +24,12 @@ public class StoryListPresent extends BasePresent<StoryListActivity> {
                 .subscribe(new ApiSubscriber<StoryBookList>() {
                     @Override
                     protected void onFail(NetError error) {
-
+                        getV().setRetryView(error);
                     }
 
                     @Override
                     protected void onSuccess(StoryBookList storyListBean) {
+                        getV().hideLoading();
                         List<StoryBookList.PartListBean> partList = storyListBean.getPartList();
                         getV().setBookList(partList);
                     }

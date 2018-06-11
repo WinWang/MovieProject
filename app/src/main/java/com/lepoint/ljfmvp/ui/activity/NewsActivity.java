@@ -66,6 +66,11 @@ public class NewsActivity extends BaseActivity<NewsPresent> {
         webNews.loadUrl(url);
     }
 
+    @Override
+    public void getNetData() {
+
+    }
+
     private class HelloWebViewClient extends WebViewClient {
 
         private String startUrl;

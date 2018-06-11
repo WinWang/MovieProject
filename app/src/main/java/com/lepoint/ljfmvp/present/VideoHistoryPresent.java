@@ -26,12 +26,13 @@ public class VideoHistoryPresent extends BasePresent<VideoHistoryActivity> {
                 .subscribe(new ApiSubscriber<HistoryListBean>() {
                     @Override
                     protected void onFail(NetError error) {
-
+                        getV().setRetryView(error);
                     }
 
                     @Override
                     protected void onSuccess(HistoryListBean historyListBean) {
                         if (historyListBean.getCode() == 200) {
+                            getV().hideLoading();
                             HistoryListBean.RetBean ret = historyListBean.getRet();
                             List<HistoryListBean.RetBean.ListBean> list = ret.getList();
                             int pnum = ret.getPnum();
@@ -46,8 +47,8 @@ public class VideoHistoryPresent extends BasePresent<VideoHistoryActivity> {
     }
 
 
-    public void deleteHistory() {
-        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).deleteHistory("863064010156927")
+    public void deleteHistory(Context context) {
+        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).deleteHistory(Kits.Package.getIMEICode(context))
                 .compose(XApi.<BaseModel>getApiTransformer())
                 .compose(XApi.<BaseModel>getScheduler())
                 .compose(getV().<BaseModel>bindToLifecycle())

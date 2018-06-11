@@ -23,12 +23,13 @@ public class MovieTypePresent extends BasePresent<MovieTypeActivity> {
                 .subscribe(new ApiSubscriber<MovieListBean>() {
                     @Override
                     protected void onFail(NetError error) {
-
+                        getV().setRetryView(error);
                     }
 
                     @Override
                     protected void onSuccess(MovieListBean movieListBean) {
                         if (movieListBean.getCode() == 200) {
+                            getV().hideLoading();
                             MovieListBean.RetBean ret = movieListBean.getRet();
                             List<MovieListBean.RetBean.ListBean> list = ret.getList();
                             getV().setMovieData(list);

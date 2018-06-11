@@ -108,7 +108,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         topBar.addRightImageButton(R.mipmap.ic_collection,R.id.topbar_right_change_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getvDelegate().toastShort("暂未开启，尽情期待");
+                getvDelegate().toastShort("暂未开启，敬请期待");
             }
         });
         rvVideoDetail.setLayoutManager(new LinearLayoutManager(context));
@@ -249,5 +249,11 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     protected void onPause() {
         super.onPause();
         JZVideoPlayer.releaseAllVideos();
+    }
+
+    @Override
+    public void getNetData() {
+        getP().getVideoDetail(mediaID,context);
+        getP().getVideoAuth(mediaID,context);
     }
 }

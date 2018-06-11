@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.utils.AppManager;
+import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.zhy.autolayout.AutoFrameLayout;
 import com.zhy.autolayout.AutoLinearLayout;
@@ -16,6 +17,7 @@ import com.zhy.autolayout.AutoRelativeLayout;
 
 import cn.droidlover.xdroidmvp.mvp.IPresent;
 import cn.droidlover.xdroidmvp.mvp.XActivity;
+import cn.droidlover.xdroidmvp.net.NetError;
 
 /**
  * Created by admin on 2018/4/24.
@@ -28,6 +30,7 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     private static final String LAYOUT_LINEARLAYOUT = "LinearLayout";
     private static final String LAYOUT_FRAMELAYOUT = "FrameLayout";
     private static final String LAYOUT_RELATIVELAYOUT = "RelativeLayout";
+    private QMUIEmptyView emptyView;
 
 
     @Override
@@ -59,6 +62,7 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     @Override
     protected void initTopBar() {
         topBar = (QMUITopBar) findViewById(R.id.qm_topbar);
+        emptyView = (QMUIEmptyView) findViewById(R.id.empty_loading_layout);
         if (topBar != null) {
 //            topBar.setBackgroundColor(ContextCompat.getColor(this, R.color.x_yellow));
             if (isShowBack()) {
@@ -68,7 +72,6 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
                         AppManager.getAppManager().finishActivity(BaseActivity.this);
                     }
                 });
-
             }
         }
     }
@@ -86,6 +89,28 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     public void showToast(String toast) {
         getvDelegate().toastShort(toast);
     }
+
+
+    public void setRetryView(NetError error) {
+        if (emptyView != null) {
+            emptyView.show(false, error.getMessage(), null, "点击重试", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    emptyView.show(true);
+                    getNetData();
+                }
+            });
+        }
+    }
+
+
+    public void hideLoading() {
+        if (emptyView != null) {
+            emptyView.hide();
+        }
+    }
+
+    public abstract void getNetData();
 
 
 }

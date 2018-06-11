@@ -32,12 +32,13 @@ public class VideoDetailPresent extends BasePresent<VideoDetailActivity> {
                 .subscribe(new ApiSubscriber<VideoDetailBean>() {
                     @Override
                     protected void onFail(NetError error) {
-
+                        getV().setRetryView(error);
                     }
 
                     @Override
                     protected void onSuccess(VideoDetailBean videoDetailBean) {
                         if (videoDetailBean.getCode() == 200) {
+                            getV().hideLoading();
                             VideoDetailBean.RetBean ret = videoDetailBean.getRet();
                             getV().setPlayData(ret);
                         } else {
@@ -48,8 +49,8 @@ public class VideoDetailPresent extends BasePresent<VideoDetailActivity> {
     }
 
 
-    public void getVideoAuth(String dataId,Context context) {
-        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).addVideoList(dataId,Kits.Package.getIMEICode(context))
+    public void getVideoAuth(String dataId, Context context) {
+        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).addVideoList(dataId, Kits.Package.getIMEICode(context))
                 .compose(XApi.<BaseModel>getApiTransformer())
                 .compose(XApi.<BaseModel>getScheduler())
                 .compose(getV().<BaseModel>bindToLifecycle())

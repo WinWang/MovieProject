@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.present.FindPresent;
 import com.lepoint.ljfmvp.ui.activity.NewsActivity;
+import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
 import com.lepoint.ljfmvp.widget.GalleryRecyclerView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -84,13 +86,37 @@ public class FindFragment extends BaseLazyFragment<FindPresent> {
         newsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Router.newIntent(context)
-                        .to(NewsActivity.class)
-                        .putString("title",newsList.get(position).getTitle())
-                        .putString("dataID",newsList.get(position).getDataId())
-                        .launch();
+                String loadType = newsList.get(position).getLoadType();
+                if (TextUtils.equals(loadType, "info_web")) {
+                    Router.newIntent(context)
+                            .to(NewsActivity.class)
+                            .putString("title", newsList.get(position).getTitle())
+                            .putString("dataID", newsList.get(position).getDataId())
+                            .launch();
+                } else {
+                    Router.newIntent(context)
+                            .to(VideoDetailActivity.class)
+                            .putString("mediaID", newsList.get(position).getDataId())
+                            .launch();
+                }
             }
         });
+
+        galleryAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                String loadType = bannerList.get(position).getLoadType();
+                if (TextUtils.equals(loadType, "video")) {
+                    Router.newIntent(context)
+                            .to(VideoDetailActivity.class)
+                            .putString("mediaID", bannerList.get(position).getDataId())
+                            .launch();
+                } else {
+                    getvDelegate().toastShort("暂未开启");
+                }
+            }
+        });
+
 
     }
 

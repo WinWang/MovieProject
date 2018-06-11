@@ -46,13 +46,13 @@ public class VideoHistoryActivity extends BaseActivity<VideoHistoryPresent> impl
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 pnum++;
-                getP().getHistoryData(pnum,context);
+                getP().getHistoryData(pnum, context);
             }
 
             @Override
             public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 pnum = 1;
-                getP().getHistoryData(pnum,context);
+                getP().getHistoryData(pnum, context);
             }
         });
     }
@@ -67,7 +67,7 @@ public class VideoHistoryActivity extends BaseActivity<VideoHistoryPresent> impl
                 DialogUtil.showCustomDialog(context, "", "您确认删除观影记录？", new DialogUtil.DialogCallBack() {
                     @Override
                     public void onActionClick() {
-                        getP().deleteHistory();
+                        getP().deleteHistory(context);
                     }
                 });
             }
@@ -122,6 +122,11 @@ public class VideoHistoryActivity extends BaseActivity<VideoHistoryPresent> impl
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         String dataId = dataList.get(position).getDataId();
-        Router.newIntent(context).to(VideoDetailActivity.class).putString("mediaID",dataId).launch();
+        Router.newIntent(context).to(VideoDetailActivity.class).putString("mediaID", dataId).launch();
+    }
+
+    @Override
+    public void getNetData() {
+        getP().getHistoryData(pnum, context);
     }
 }

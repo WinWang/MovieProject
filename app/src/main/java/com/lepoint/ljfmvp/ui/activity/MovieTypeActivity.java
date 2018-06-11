@@ -109,4 +109,8 @@ public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
         return new MovieTypePresent();
     }
 
+    @Override
+    public void getNetData() {
+
+    }
 }

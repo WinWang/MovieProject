@@ -13,6 +13,8 @@
         android:layout_height="?attr/qmui_topbar_height"
         app:qmui_topbar_title_color="@color/black"></com.qmuiteam.qmui.widget.QMUITopBar>
 
+    <include layout="@layout/empty_loading_layout"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120px"

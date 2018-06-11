@@ -73,4 +73,8 @@ public class StoryListActivity extends BaseActivity<StoryListPresent> {
         return new StoryListPresent();
     }
 
+    @Override
+    public void getNetData() {
+        getP().getBookList(bookID + "");
+    }
 }
