@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
+import com.lepoint.ljfmvp.ui.fragment.BookFragment;
 import com.lepoint.ljfmvp.ui.fragment.FindFragment;
 import com.lepoint.ljfmvp.ui.fragment.HomeFragment;
 import com.lepoint.ljfmvp.ui.fragment.StoryFragment;
@@ -103,11 +104,11 @@ public class HomeActivity extends BaseActivity {
         HomeFragment homeFragment = new HomeFragment();
         StoryFragment storyFragment = new StoryFragment();
         FindFragment findFragment1 = new FindFragment();
-        FindFragment findFragment2 = new FindFragment();
+        BookFragment bookFragment = new BookFragment();
         fragmentList.add(homeFragment);
         fragmentList.add(storyFragment);
         fragmentList.add(findFragment1);
-        fragmentList.add(findFragment2);
+        fragmentList.add(bookFragment);
         XFragmentAdapter xFragmentAdapter = new XFragmentAdapter(getSupportFragmentManager(), fragmentList, null);
         homeVp.setAdapter(xFragmentAdapter);
     }

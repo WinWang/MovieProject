@@ -39,7 +39,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                     @Override
                     protected void onFail(NetError error) {
                         getV().refreshHome.finishRefresh();
-                        getV().qmuiEmpty.show(false, error.getMessage(), null, "点击重新加载", new View.OnClickListener() {
+                        getV().qmuiEmpty.show(false, error.getMessage(), null, "点击重试", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 getHomeListData();
@@ -67,42 +67,46 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                                     titleList.add(bean.getTitle());
                                 }
                                 getV().setBannerData(bannerList, titleList, childList);
-                                //免费推荐
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> freeList = list.get(1).getChildList();
-                                getV().setFreeRecommonedData(freeList);
 
-                                //热点资讯
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> hotList = list.get(2).getChildList();
-                                getV().setHotList(hotList);
+                                for (HomeListBean.RetBean.ListBean bean : list) {
+                                    switch (bean.getTitle()){
+                                        case "免费推荐":
+                                            getV().setFreeRecommonedData(bean.getChildList());
+                                            break;
 
-                                //精彩推荐
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> intrestList = list.get(3).getChildList();
-                                getV().setIntrestList(intrestList);
+                                        case "热点资讯":
+                                            getV().setHotList(bean.getChildList());
+                                            break;
 
-                                //大咖剧场
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> dkList = list.get(5).getChildList();
-                                getV().setDkList(dkList);
+                                        case "精彩推荐":
+                                            getV().setIntrestList(bean.getChildList());
+                                            break;
 
-                                //电影资讯
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> movieNewsList = list.get(6).getChildList();
-                                getV().setMovieNewsList(movieNewsList);
+                                        case "大咖剧场":
+                                            getV().setDkList(bean.getChildList());
+                                            break;
 
-                                //大片抢先看
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> dpMovieList = list.get(7).getChildList();
-                                getV().setDPList(dpMovieList);
+                                        case "电影资讯":
+                                            getV().setMovieNewsList(bean.getChildList());
+                                            break;
 
-                                //微电影
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> netList = list.get(8).getChildList();
-                                getV().setNetList(netList);
+                                        case "大片抢先看":
+                                            getV().setDPList(bean.getChildList());
+                                            break;
 
-                                //香港映像
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> hkList = list.get(9).getChildList();
-                                getV().setHKList(hkList);
+                                        case "微电影":
+                                            getV().setNetList(bean.getChildList());
+                                            break;
 
-                                //好莱坞
-                                List<HomeListBean.RetBean.ListBean.ChildListBean> hlwList = list.get(10).getChildList();
-                                getV().setHlwList(hlwList);
+                                        case "香港映象":
+                                            getV().setHKList(bean.getChildList());
+                                            break;
 
+                                        case "好莱坞":
+                                            getV().setHlwList(bean.getChildList());
+                                            break;
+                                    }
+                                }
                             }
                         }
                     }

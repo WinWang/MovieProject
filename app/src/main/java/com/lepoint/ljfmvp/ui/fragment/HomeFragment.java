@@ -104,7 +104,7 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
         rvHomeList.setLayoutManager(new LinearLayoutManager(context));
         homeAdapter = new HomeAdapter(R.layout.item_layout, dataList, context);
         rvHomeList.setAdapter(homeAdapter);
-
+        rvHomeList.setFocusableInTouchMode(false);
         //初始化头布局
         View header = View.inflate(context, R.layout.home_header_layout, null);
         homeAdapter.addHeaderView(header);
@@ -225,9 +225,9 @@ public class HomeFragment extends XLazyFragment<HomeFragPresent> implements OnRe
         movieNewsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                String loadURL = movieNewsList.get(position).getLoadURL();
+                String loadURL = movieNewsList.get(position).getDataId();
                 String title = movieNewsList.get(position).getTitle();
-                Router.newIntent(context).putString("title", title).putString("url", loadURL).to(NewsActivity.class).launch();
+                Router.newIntent(context).putString("title", title).putString("dataID", loadURL).to(NewsActivity.class).launch();
             }
         });
 

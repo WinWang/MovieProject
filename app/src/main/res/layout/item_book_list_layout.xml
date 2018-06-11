@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lepoint.ljfmvp.widget.autolayout.AutoCardView
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="170px"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="10px"
+        app:cardCornerRadius="8px"
+        app:cardElevation="10px">
+
+        <TextView
+            android:id="@+id/tv_story_part_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:singleLine="true"
+            android:text="ddddd"
+            android:textSize="40px" />
+
+
+    </com.lepoint.ljfmvp.widget.autolayout.AutoCardView>
+
+
+</LinearLayout>
