@@ -7,7 +7,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/orangeColor</item>
-
+        <item name="qmui_round_btn_border_color">@color/colorAccent</item>
+        <item name="qmui_round_btn_text_color">@color/colorAccent</item>
     </style>
 
 
