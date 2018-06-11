@@ -1,5 +1,7 @@
 package com.lepoint.ljfmvp.http;
 
+import android.net.Uri;
+
 import com.lepoint.ljfmvp.model.BaseModel;
 
 import org.reactivestreams.Publisher;
@@ -10,7 +12,10 @@ import cn.droidlover.xdroidmvp.net.NetProvider;
 import cn.droidlover.xdroidmvp.net.XApi;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableTransformer;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 
 public class RetrofitManager {
     private static final String SOCKETTIMEOUTEXCEPTION = "网络连接超时，请检查您的网络状态，稍后重试";
@@ -52,20 +57,11 @@ public class RetrofitManager {
                     @Override
                     public Publisher<T> apply(T model) throws Exception {
 
-                        if (model == null || model.isNull()) {
-                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.NoDataError));
-                        } else if (model.isAuthError()) { //刷新token
-                            return (Publisher<T>) getApiService(URLConfig.BASE_API_URL).getToken("1","1");
-                        } else if (model.isBizError()) {
-                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.BusinessError));
-                        } else {
-                            return Flowable.just(model);
-                        }
+                        return null;
                     }
                 });
             }
         };
     }
-
 
 }

@@ -46,13 +46,13 @@ public class VideoHistoryActivity extends BaseActivity<VideoHistoryPresent> impl
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 pnum++;
-                getP().getHistoryData(pnum);
+                getP().getHistoryData(pnum,context);
             }
 
             @Override
             public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 pnum = 1;
-                getP().getHistoryData(pnum);
+                getP().getHistoryData(pnum,context);
             }
         });
     }

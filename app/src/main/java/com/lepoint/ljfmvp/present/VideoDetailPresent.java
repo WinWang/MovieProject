@@ -1,5 +1,7 @@
 package com.lepoint.ljfmvp.present;
 
+import android.content.Context;
+
 import com.lepoint.ljfmvp.base.BasePresent;
 import com.lepoint.ljfmvp.http.RetrofitManager;
 import com.lepoint.ljfmvp.http.URLConfig;
@@ -9,6 +11,7 @@ import com.lepoint.ljfmvp.model.VideoDetailBean;
 import com.lepoint.ljfmvp.ui.activity.VideoDetailActivity;
 import com.lepoint.ljfmvp.utils.ToastUtil;
 
+import cn.droidlover.xdroidmvp.kit.Kits;
 import cn.droidlover.xdroidmvp.net.ApiSubscriber;
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.XApi;
@@ -20,9 +23,9 @@ public class VideoDetailPresent extends BasePresent<VideoDetailActivity> {
      *
      * @param mediaID
      */
-    public void getVideoDetail(String mediaID) {
+    public void getVideoDetail(String mediaID, Context context) {
         RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL)
-                .getVideoDetail(mediaID, "863064010156927")
+                .getVideoDetail(mediaID, Kits.Package.getIMEICode(context))
                 .compose(XApi.<VideoDetailBean>getApiTransformer())
                 .compose(XApi.<VideoDetailBean>getScheduler())
                 .compose(getV().<VideoDetailBean>bindToLifecycle())
@@ -45,8 +48,8 @@ public class VideoDetailPresent extends BasePresent<VideoDetailActivity> {
     }
 
 
-    public void getVideoAuth(String dataId) {
-        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).addVideoList(dataId)
+    public void getVideoAuth(String dataId,Context context) {
+        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).addVideoList(dataId,Kits.Package.getIMEICode(context))
                 .compose(XApi.<BaseModel>getApiTransformer())
                 .compose(XApi.<BaseModel>getScheduler())
                 .compose(getV().<BaseModel>bindToLifecycle())

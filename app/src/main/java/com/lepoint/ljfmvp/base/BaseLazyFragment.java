@@ -19,16 +19,17 @@ public abstract class BaseLazyFragment<P extends IPresent> extends XLazyFragment
     protected QMUIEmptyView emptyView;
 
     @Override
-    public void initData(Bundle savedInstanceState) {
-        emptyView = (QMUIEmptyView) getRealRootView().findViewById(R.id.empty_loading_layout);
+    public void bindUI(View rootView) {
+        super.bindUI(rootView);
+        emptyView = (QMUIEmptyView) rootView.findViewById(R.id.empty_loading_layout);
     }
-
 
     public void setRetryView(NetError error) {
         if (emptyView != null) {
             emptyView.show(false, error.getMessage(), null, "点击重试", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    emptyView.show(true);
                     getNetData();
                 }
             });

@@ -70,8 +70,8 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         mediaID = getIntent().getStringExtra("mediaID");
         initView();
         initListener();
-        getP().getVideoDetail(mediaID);
-        getP().getVideoAuth(mediaID);
+        getP().getVideoDetail(mediaID,context);
+        getP().getVideoAuth(mediaID,context);
     }
 
     private void initListener() {
@@ -79,7 +79,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 String dataId = aboutList.get(position).getDataId();
-                getP().getVideoDetail(dataId);
+                getP().getVideoDetail(dataId,context);
             }
         });
 
@@ -92,8 +92,8 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
                     qmuiTipDialog.show();
                 }
                 String dataId = likeList.get(position).getDataId();
-                getP().getVideoAuth(dataId);
-                getP().getVideoDetail(dataId);
+                getP().getVideoAuth(dataId,context);
+                getP().getVideoDetail(dataId,context);
             }
         });
 

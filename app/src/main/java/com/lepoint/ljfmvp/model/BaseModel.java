@@ -8,10 +8,10 @@ import cn.droidlover.xdroidmvp.net.IModel;
 
 public class BaseModel implements IModel {
 
-    private String message;
-    private int resultCode;
-    private int code;
-    private String msg;
+    public String message;
+    public int resultCode;
+    public int code;
+    public String msg;
 
 
     @Override
@@ -21,7 +21,7 @@ public class BaseModel implements IModel {
 
     @Override
     public boolean isAuthError() {
-        return resultCode == -1;
+        return false;
     }
 
     @Override

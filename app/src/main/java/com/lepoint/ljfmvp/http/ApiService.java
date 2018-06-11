@@ -2,12 +2,15 @@ package com.lepoint.ljfmvp.http;
 
 import com.lepoint.ljfmvp.model.BannerBean;
 import com.lepoint.ljfmvp.model.BaseModel;
+import com.lepoint.ljfmvp.model.BookListBean;
 import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.model.HistoryListBean;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.MovieListBean;
+import com.lepoint.ljfmvp.model.NewsDetailBean;
+import com.lepoint.ljfmvp.model.StoryBookList;
 import com.lepoint.ljfmvp.model.StoryListBean;
 import com.lepoint.ljfmvp.model.TokenBean;
 import com.lepoint.ljfmvp.model.UpdateBean;
@@ -71,8 +74,8 @@ public interface ApiService {
     Flowable<BaseModel> getVideoAuth(@Query("mediaId") String mediaId, @Query("deviceId") String deviceId);
 
     @FormUrlEncoded
-    @POST("front/playRecordApi/add.do?deviceSysVersion=4.4.2&appVersion=6.3.4&deviceModel=Nexus%206&deviceManufacturer=motorola&deviceId=863064010156927&appId=shoujimovie&deviceSysType=ANDROID&appChannel=tengxun&appCode=634&userId=&locationId=11&mac=08:00:27:59:a5:f5&lat=&lng=")
-    Flowable<BaseModel> addVideoList(@Field("mediaId") String mediaId);
+    @POST("front/playRecordApi/add.do?deviceSysVersion=4.4.2&appVersion=6.3.4&deviceModel=Nexus%206&deviceManufacturer=motorola&appId=shoujimovie&deviceSysType=ANDROID&appChannel=tengxun&appCode=634&userId=&locationId=11&mac=08:00:27:59:a5:f5&lat=&lng=")
+    Flowable<BaseModel> addVideoList(@Field("mediaId") String mediaId,@Field("deviceId")String deviceID);
 
     //获取发现的表头数据
     @GET("front/find/findMoviePage.do")
@@ -101,5 +104,17 @@ public interface ApiService {
 
     @GET("StoryBook/GetMagazine.ashx")
     Flowable<StoryListBean> getStoryList(@Query("MagazineType") int type, @Query("nowpage") int pnum);
+
+    @FormUrlEncoded
+    @POST("front/informationApi/getInfoDetails.do")
+    Flowable<NewsDetailBean> getNewsDetail(@Field("infoId") String dataId);
+
+    @GET("StoryBook/GetBookParts.ashx")
+    Flowable<StoryBookList> getBookList(@Query("bookId") String bookID);
+
+
+    @GET("tuwen/apktw/bookv5?appkey=/I3dNX/WnzW%252BlLZa%252BZRnWQ%3D%3D&devid=C55gSNm0I47yG%252BXMEz9iCtla5D58V2OQ&devtype=1")
+    Flowable<BookListBean> getYiLinBookList();
+
 
 }

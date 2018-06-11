@@ -4,6 +4,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.FindHeaderGalleryAdapter;
 import com.lepoint.ljfmvp.adapter.FindNewsAdapter;
@@ -20,8 +22,8 @@ import com.lepoint.ljfmvp.base.BaseLazyFragment;
 import com.lepoint.ljfmvp.model.FindHeaderBean;
 import com.lepoint.ljfmvp.model.FindNewsBean;
 import com.lepoint.ljfmvp.present.FindPresent;
+import com.lepoint.ljfmvp.ui.activity.NewsActivity;
 import com.lepoint.ljfmvp.widget.GalleryRecyclerView;
-import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
@@ -30,8 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
+import cn.droidlover.xdroidmvp.router.Router;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class FindFragment extends BaseLazyFragment<FindPresent> {
@@ -39,8 +40,6 @@ public class FindFragment extends BaseLazyFragment<FindPresent> {
     RecyclerView rvFind;
     @BindView(R.id.refresh_find_layout)
     public SmartRefreshLayout refreshFindLayout;
-    @BindView(R.id.empty_loading_layout)
-    public QMUIEmptyView emptyLoadingLayout;
     private ArrayList<FindHeaderBean.RetBean.BannerListBean> bannerList = new ArrayList<>();
     private ArrayList<FindNewsBean.RetBean.FindListBean> newsList = new ArrayList<>();
     private FindHeaderGalleryAdapter galleryAdapter;
@@ -79,6 +78,17 @@ public class FindFragment extends BaseLazyFragment<FindPresent> {
                 pageNum = 1;
                 refreshTag = true;
                 getP().getFindNewsData(pageNum);
+            }
+        });
+
+        newsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Router.newIntent(context)
+                        .to(NewsActivity.class)
+                        .putString("title",newsList.get(position).getTitle())
+                        .putString("dataID",newsList.get(position).getDataId())
+                        .launch();
             }
         });
 

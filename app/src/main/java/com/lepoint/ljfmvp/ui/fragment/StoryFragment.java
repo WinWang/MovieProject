@@ -7,12 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.adapter.StoryAdapterHead;
 import com.lepoint.ljfmvp.adapter.StoryAdapterOuter;
 import com.lepoint.ljfmvp.base.BaseLazyFragment;
 import com.lepoint.ljfmvp.model.StoryListBean;
 import com.lepoint.ljfmvp.present.StoryPresent;
+import com.lepoint.ljfmvp.ui.activity.StoryListActivity;
 import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -23,14 +25,15 @@ import java.util.List;
 
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.mvp.XLazyFragment;
+import cn.droidlover.xdroidmvp.router.Router;
 
 /**
  * Created by Administrator on 2018/6/3 0003.
  */
 
 public class StoryFragment extends BaseLazyFragment<StoryPresent> {
-    @BindView(R.id.empty_loading_layout)
-    public QMUIEmptyView emptyLoadingLayout;
+    //    @BindView(R.id.empty_loading_layout)
+//    public QMUIEmptyView emptyLoadingLayout;
     @BindView(R.id.rv_story)
     RecyclerView rvStory;
     @BindView(R.id.refresh_story)
@@ -44,7 +47,6 @@ public class StoryFragment extends BaseLazyFragment<StoryPresent> {
 
     @Override
     public void initData(Bundle savedInstanceState) {
-        super.initData(savedInstanceState);
         initView();
         initListener();
         getNetData();
@@ -73,6 +75,30 @@ public class StoryFragment extends BaseLazyFragment<StoryPresent> {
                 getP().getStoryListHead();
             }
         });
+
+        headAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Router.newIntent(context)
+                        .putInt("bookID", HeadList.get(position).getBookId())
+                        .putString("title", HeadList.get(position).getBookName())
+                        .to(StoryListActivity.class)
+                        .launch();
+            }
+        });
+
+
+        storyAdapterOuter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Router.newIntent(context)
+                        .putInt("bookID", dataList.get(position).getBookId())
+                        .putString("title", dataList.get(position).getBookName())
+                        .to(StoryListActivity.class)
+                        .launch();
+            }
+        });
+
     }
 
     private void initView() {

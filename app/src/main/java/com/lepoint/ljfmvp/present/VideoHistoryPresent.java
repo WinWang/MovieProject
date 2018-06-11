@@ -1,5 +1,7 @@
 package com.lepoint.ljfmvp.present;
 
+import android.content.Context;
+
 import com.lepoint.ljfmvp.base.BasePresent;
 import com.lepoint.ljfmvp.http.RetrofitManager;
 import com.lepoint.ljfmvp.http.URLConfig;
@@ -10,13 +12,14 @@ import com.lepoint.ljfmvp.ui.activity.VideoHistoryActivity;
 
 import java.util.List;
 
+import cn.droidlover.xdroidmvp.kit.Kits;
 import cn.droidlover.xdroidmvp.net.ApiSubscriber;
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.XApi;
 
 public class VideoHistoryPresent extends BasePresent<VideoHistoryActivity> {
-    public void getHistoryData(final int pageNum) {
-        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHistoryList("863064010156927", pageNum)
+    public void getHistoryData(final int pageNum, Context context) {
+        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHistoryList(Kits.Package.getIMEICode(context), pageNum)
                 .compose(XApi.<HistoryListBean>getApiTransformer())
                 .compose(XApi.<HistoryListBean>getScheduler())
                 .compose(getV().<HistoryListBean>bindToLifecycle())

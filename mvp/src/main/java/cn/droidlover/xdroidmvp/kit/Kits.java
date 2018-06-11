@@ -209,6 +209,14 @@ public class Kits {
             }
             return false;
         }
+
+
+        public static String getIMEICode(Context context){
+            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(context.TELEPHONY_SERVICE);
+            String imei = telephonyManager.getDeviceId();
+            return imei;
+        }
+
     }
 
 

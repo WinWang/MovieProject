@@ -74,6 +74,7 @@
         android:visibility="gone">
 
         <android.support.v7.widget.RecyclerView
+            android:descendantFocusability="blocksDescendants"
             android:id="@+id/rv_home_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
