@@ -82,11 +82,16 @@
         <activity
             android:name=".ui.activity.MovieTypeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.activity.VideoHistoryActivity" />
-        <activity android:name=".ui.activity.SeachActivity" />
-        <activity android:name=".ui.activity.NewsActivity" />
-        <activity android:name=".ui.activity.StoryListActivity" />
-        <activity android:name=".ui.activity.BookListActivity"></activity>
+        <activity android:name=".ui.activity.VideoHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SeachActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.NewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.StoryListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.BookListActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

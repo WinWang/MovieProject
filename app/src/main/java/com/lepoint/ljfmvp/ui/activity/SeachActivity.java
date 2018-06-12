@@ -1,26 +1,27 @@
 package com.lepoint.ljfmvp.ui.activity;
 
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lepoint.ljfmvp.R;
+import com.lepoint.ljfmvp.adapter.HistoryAdapter;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.model.RealmHistoryBean;
 import com.lepoint.ljfmvp.utils.AppManager;
 import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
-import com.qmuiteam.qmui.util.QMUIDisplayHelper;
-import com.qmuiteam.qmui.widget.QMUIFloatLayout;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -38,13 +39,26 @@ public class SeachActivity extends BaseActivity {
     AutoRoundRelativielayout qmrlHomeSeach;
     @BindView(R.id.tv_seach)
     TextView tvSeach;
-    @BindView(R.id.seach_float_layout)
-    QMUIFloatLayout seachFloatLayout;
+    @BindView(R.id.rv_seach_history)
+    RecyclerView rvSeachHistory;
+
+    ArrayList<RealmHistoryBean> historyList = new ArrayList<>();
+    @BindView(R.id.iv_history_delete)
+    ImageView ivHistoryDelete;
+    private HistoryAdapter historyAdapter;
+    private Realm realm;
 
     @Override
     public void initData(Bundle savedInstanceState) {
-        List<RealmHistoryBean> realmData = getRealmData();
-        addItem(realmData);
+        realm = Realm.getDefaultInstance();
+        initView();
+        getNetData();
+    }
+
+    private void initView() {
+        rvSeachHistory.setLayoutManager(new LinearLayoutManager(context));
+        historyAdapter = new HistoryAdapter(R.layout.item_seach_history_layout, historyList);
+        rvSeachHistory.setAdapter(historyAdapter);
     }
 
     @Override
@@ -53,17 +67,10 @@ public class SeachActivity extends BaseActivity {
     }
 
     private void addItem(List<RealmHistoryBean> realmData) {
-        for (RealmHistoryBean realmDatum : realmData) {
-            TextView textView = new TextView(context);
-            int textViewPadding = QMUIDisplayHelper.dp2px(context, 4);
-            textView.setPadding(textViewPadding, textViewPadding, textViewPadding, textViewPadding);
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-            textView.setTextColor(ContextCompat.getColor(context, R.color.qmui_config_color_white));
-            textView.setText(String.valueOf(realmDatum.getName()));
-            int textViewSize = QMUIDisplayHelper.dpToPx(60);
-            ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(textViewSize, textViewSize);
-            seachFloatLayout.addView(textView, lp);
-        }
+        historyList.clear();
+        Collections.reverse(realmData);
+        historyList.addAll(realmData);
+        historyAdapter.notifyDataSetChanged();
 
     }
 
@@ -75,10 +82,11 @@ public class SeachActivity extends BaseActivity {
 
     @Override
     public void getNetData() {
-
+        List<RealmHistoryBean> realmData = getRealmData();
+        addItem(realmData);
     }
 
-    @OnClick({R.id.seach_back, R.id.tv_seach})
+    @OnClick({R.id.seach_back, R.id.tv_seach, R.id.iv_history_delete})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.seach_back:
@@ -87,22 +95,28 @@ public class SeachActivity extends BaseActivity {
             case R.id.tv_seach:
                 insertData();
                 break;
+            case R.id.iv_history_delete:
+                deleteRealmData();
+                historyList.clear();
+                historyAdapter.notifyDataSetChanged();
+                break;
         }
     }
 
     /**
-     *
+     * 插入数据
      */
     private void insertData() {
         String s = editSeach.getText().toString();
         if (!TextUtils.isEmpty(s)) {
-            Realm realm = Realm.getDefaultInstance();
             realm.beginTransaction();
             RealmHistoryBean realmHistoryBean = new RealmHistoryBean();
             realmHistoryBean.setId(s);
             realmHistoryBean.setName(s);
             realm.copyToRealmOrUpdate(realmHistoryBean);
             realm.commitTransaction();
+            //刷新数据
+            addItem(getRealmData());
         }
     }
 
@@ -112,11 +126,25 @@ public class SeachActivity extends BaseActivity {
      * @return
      */
     private List<RealmHistoryBean> getRealmData() {
-        Realm mRealm = Realm.getDefaultInstance();
-        RealmResults<RealmHistoryBean> historyBeans = mRealm.where(RealmHistoryBean.class).findAll();
-        return mRealm.copyFromRealm(historyBeans);
+        RealmResults<RealmHistoryBean> historyBeans = realm.where(RealmHistoryBean.class).findAll();
+        return realm.copyFromRealm(historyBeans);
 
     }
 
 
+    private void deleteRealmData() {
+        final RealmResults<RealmHistoryBean> students3 = realm.where(RealmHistoryBean.class).findAll();
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                students3.deleteAllFromRealm();
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
+    }
 }

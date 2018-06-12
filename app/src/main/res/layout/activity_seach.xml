@@ -37,7 +37,6 @@
                 android:src="@mipmap/search_sel" />
 
             <EditText
-                android:textCursorDrawable="@drawable/edit_cursor"
                 android:id="@+id/edit_seach"
                 android:layout_width="600px"
                 android:layout_height="wrap_content"
@@ -45,7 +44,9 @@
                 android:layout_marginLeft="110px"
                 android:layout_toRightOf="@+id/iv_seach_edit"
                 android:background="@null"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:textSize="40px" />
 
         </com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout>
 
@@ -61,12 +62,41 @@
             android:text="搜索" />
     </RelativeLayout>
 
-    <com.qmuiteam.qmui.widget.QMUIFloatLayout
-        android:id="@+id/seach_float_layout"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="130px"
+        android:orientation="horizontal">
 
-    </com.qmuiteam.qmui.widget.QMUIFloatLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40px"
+            android:text="搜索记录"
+            android:textColor="#777"
+            android:textSize="35px" />
+
+        <ImageView
+            android:id="@+id/iv_history_delete"
+            android:layout_width="130px"
+            android:layout_height="130px"
+            android:layout_gravity="right"
+            android:layout_marginRight="30px"
+            android:padding="30px"
+            android:src="@mipmap/search_delete_nor" />
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e5e5e5"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_seach_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>
