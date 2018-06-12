@@ -3,7 +3,7 @@ package com.lepoint.ljfmvp.base;
 import android.app.Application;
 import android.content.Context;
 
-import com.squareup.leakcanary.LeakCanary;
+import com.lepoint.ljfmvp.R;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import cn.droidlover.xdroidmvp.XDroidConf;
@@ -11,6 +11,8 @@ import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.NetProvider;
 import cn.droidlover.xdroidmvp.net.RequestHandler;
 import cn.droidlover.xdroidmvp.net.XApi;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import okhttp3.CookieJar;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -32,9 +34,16 @@ public class MyApp extends Application {
         mContext = this;
         AutoLayoutConifg.getInstance().useDeviceSize();
         registerProvider();
-//        LeakCanary.install(this);
+        //        LeakCanary.install(this);
         XDroidConf.devMode(true);
-//        XDroidConf.LOG = false;
+        XDroidConf.IL_ERROR_RES = R.mipmap.img_default;
+        XDroidConf.IL_LOADING_RES = R.mipmap.img_default;
+        //        XDroidConf.LOG = false;
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder().build();
+        Realm.setDefaultConfiguration(config);
+
+
     }
 
 

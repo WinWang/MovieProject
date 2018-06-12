@@ -37,12 +37,13 @@
                 android:src="@mipmap/search_sel" />
 
             <EditText
+                android:textCursorDrawable="@drawable/edit_cursor"
                 android:id="@+id/edit_seach"
                 android:layout_width="600px"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:layout_toRightOf="@+id/iv_home_seach"
+                android:layout_marginLeft="110px"
+                android:layout_toRightOf="@+id/iv_seach_edit"
                 android:background="@null"
                 android:singleLine="true" />
 
@@ -58,15 +59,14 @@
             android:layout_marginRight="30px"
             android:padding="10px"
             android:text="搜索" />
-
-
-
-
-
-
-
-
     </RelativeLayout>
+
+    <com.qmuiteam.qmui.widget.QMUIFloatLayout
+        android:id="@+id/seach_float_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.qmuiteam.qmui.widget.QMUIFloatLayout>
 
 
 </LinearLayout>
