@@ -9,11 +9,11 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
-import com.lepoint.ljfmvp.adapter.MovieAdapter;
 import com.lepoint.ljfmvp.adapter.MovieListAdapter;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.model.MovieListBean;
 import com.lepoint.ljfmvp.present.MovieTypePresent;
+import com.lepoint.ljfmvp.widget.autolayout.AutoRoundRelativielayout;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.router.Router;
 
 public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
@@ -34,6 +34,8 @@ public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
     RecyclerView rvMovieList;
     @BindView(R.id.refresh_movie_list)
     SmartRefreshLayout refreshMovieList;
+    @BindView(R.id.qmrl_home_seach)
+    AutoRoundRelativielayout qmrlHomeSeach;
     private String dataID;
     private int pnum = 1;
     private String title;
@@ -112,5 +114,13 @@ public class MovieTypeActivity extends BaseActivity<MovieTypePresent> {
     @Override
     public void getNetData() {
 
+    }
+
+
+    @OnClick(R.id.qmrl_home_seach)
+    public void onViewClicked() {
+        Router.newIntent(context)
+                .to(SeachActivity.class)
+                .launch();
     }
 }

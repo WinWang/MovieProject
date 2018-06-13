@@ -10,6 +10,7 @@ import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.MovieListBean;
 import com.lepoint.ljfmvp.model.NewsDetailBean;
+import com.lepoint.ljfmvp.model.SeachListBean;
 import com.lepoint.ljfmvp.model.StoryBookList;
 import com.lepoint.ljfmvp.model.StoryListBean;
 import com.lepoint.ljfmvp.model.TokenBean;
@@ -115,6 +116,14 @@ public interface ApiService {
 
     @GET("tuwen/apktw/bookv5?appkey=/I3dNX/WnzW%252BlLZa%252BZRnWQ%3D%3D&devid=C55gSNm0I47yG%252BXMEz9iCtla5D58V2OQ&devtype=1")
     Flowable<BookListBean> getYiLinBookList();
+
+    /**
+     * 搜索接口
+      * @param keyword
+     * @return
+     */
+    @GET("front/searchKeyWordApi/getVideoListByKeyWord.do")
+    Flowable<SeachListBean> querySeach(@Query("keyword")String keyword);
 
 
 }
