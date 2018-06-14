@@ -3,10 +3,11 @@ package com.lepoint.ljfmvp.base;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.jude.swipbackhelper.SwipeBackHelper;
+import com.jude.swipbackhelper.SwipeListener;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.utils.AppManager;
 import com.qmuiteam.qmui.widget.QMUIEmptyView;
@@ -48,7 +49,8 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
             view = new AutoRelativeLayout(context, attrs);
         }
 
-        if (view != null) return view;
+        if (view != null)
+            return view;
         return super.onCreateView(name, context, attrs);
     }
 
@@ -56,7 +58,33 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppManager.getAppManager().addActivity(this);
+        initSwipeBackHelper();
+    }
 
+
+    /**
+     * 初始化侧滑关闭
+     */
+    private void initSwipeBackHelper() {
+        SwipeBackHelper.onCreate(this);
+        SwipeBackHelper.getCurrentPage(this)
+                .setSwipeBackEnable(true)//设置是否可滑动
+                .setSwipeSensitivity(0.5f)//对横向滑动手势的敏感程度。0为迟钝 1为敏感
+                .setSwipeRelateEnable(true)//是否与下一级activity联动(微信效果)。默认关
+                .setSwipeEdgePercent(0.1f)//可滑动的范围。百分比。0.2表示为左边20%的屏幕
+                .setSwipeRelateOffset(300).addListener(new SwipeListener() {//滑动监听
+            @Override
+            public void onScroll(float percent, int px) {//滑动的百分比与距离
+            }
+
+            @Override
+            public void onEdgeTouch() {//当开始滑动
+            }
+
+            @Override
+            public void onScrollToClose() {//当滑动关闭
+            }
+        });
     }
 
     @Override
@@ -64,7 +92,7 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
         topBar = (QMUITopBar) findViewById(R.id.qm_topbar);
         emptyView = (QMUIEmptyView) findViewById(R.id.empty_loading_layout);
         if (topBar != null) {
-//            topBar.setBackgroundColor(ContextCompat.getColor(this, R.color.x_yellow));
+            //            topBar.setBackgroundColor(ContextCompat.getColor(this, R.color.x_yellow));
             if (isShowBack()) {
                 topBar.addLeftImageButton(R.drawable.ic_keyboard_arrow_left_black_24dp, R.id.qmui_topbar_item_left_back).setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -80,6 +108,13 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     protected void onDestroy() {
         super.onDestroy();
         AppManager.getAppManager().finishActivity(this);
+        SwipeBackHelper.onDestroy(this);
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        SwipeBackHelper.onPostCreate(this);
     }
 
     protected boolean isShowBack() {

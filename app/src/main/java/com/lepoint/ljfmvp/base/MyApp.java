@@ -42,6 +42,8 @@ public class MyApp extends Application {
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
+        XDroidConf.ROUTER_ANIM_ENTER = R.anim.slide_left_in;
+        XDroidConf.ROUTER_ANIM_EXIT = R.anim.slide_left_out;
 
 
     }
