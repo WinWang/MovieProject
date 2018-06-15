@@ -10,6 +10,14 @@
         <item name="qmui_round_btn_border_color">@color/colorAccent</item>
         <item name="qmui_round_btn_text_color">@color/colorAccent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <!--<item name="android:windowAnimationStyle">@style/fade</item>-->
+    </style>
+
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
     </style>
 
 

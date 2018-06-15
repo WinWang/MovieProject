@@ -2,14 +2,12 @@ package com.lepoint.ljfmvp.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
-import com.jude.swipbackhelper.SwipeBackHelper;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.ui.fragment.BookFragment;
@@ -33,12 +31,6 @@ public class HomeActivity extends BaseActivity {
     BottomNavigationView homeBottomView;
     private List<Fragment> fragmentList = new ArrayList<>();
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        SwipeBackHelper.getCurrentPage(this)
-                .setSwipeBackEnable(false);
-    }
 
     @Override
     public void initData(Bundle savedInstanceState) {
@@ -108,6 +100,11 @@ public class HomeActivity extends BaseActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean isSwipe() {
+        return false;
     }
 
     private void setHomeVpAdapter() {

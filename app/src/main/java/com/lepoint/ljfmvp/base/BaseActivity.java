@@ -58,9 +58,15 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppManager.getAppManager().addActivity(this);
-        initSwipeBackHelper();
+        if(isSwipe()){
+            initSwipeBackHelper();
+        }
     }
 
+
+    public boolean isSwipe(){
+        return true;
+    }
 
     /**
      * 初始化侧滑关闭
@@ -108,13 +114,17 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     protected void onDestroy() {
         super.onDestroy();
         AppManager.getAppManager().finishActivity(this);
-        SwipeBackHelper.onDestroy(this);
+        if(isSwipe()){
+            SwipeBackHelper.onDestroy(this);
+        }
     }
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        SwipeBackHelper.onPostCreate(this);
+        if(isSwipe()){
+            SwipeBackHelper.onPostCreate(this);
+        }
     }
 
     protected boolean isShowBack() {
@@ -143,6 +153,12 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
         if (emptyView != null) {
             emptyView.hide();
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_right_in,R.anim.slide_right_out);
     }
 
     public abstract void getNetData();

@@ -1,19 +1,13 @@
 package com.lepoint.ljfmvp.http;
 
-import android.net.Uri;
-
-import com.lepoint.ljfmvp.model.BaseModel;
-
 import org.reactivestreams.Publisher;
 
 import cn.droidlover.xdroidmvp.net.IModel;
-import cn.droidlover.xdroidmvp.net.NetError;
-import cn.droidlover.xdroidmvp.net.NetProvider;
 import cn.droidlover.xdroidmvp.net.XApi;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableTransformer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
@@ -63,5 +57,45 @@ public class RetrofitManager {
             }
         };
     }
+
+
+    /**
+     * 异常处理变换
+     *
+     * @return
+     */
+    public static <T extends IModel> FlowableTransformer<T, T> rxCacheBeanHelper(final String key) {
+
+        return new FlowableTransformer<T, T>() {
+            @Override
+            public Publisher<T> apply(Flowable<T> upstream) {
+                return upstream
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .doOnNext(new Consumer<T>() {
+                            @Override
+                            public void accept(T t) throws Exception {
+
+                            }
+                        });
+
+                //                return upstream.flatMap(new Function<T, Publisher<T>>() {
+                //                    @Override
+                //                    public Publisher<T> apply(T model) throws Exception {
+                //                        if (model == null || model.isNull()) {
+                //                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.NoDataError));
+                //                        } else if (model.isAuthError()) {
+                //                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.AuthError));
+                //                        } else if (model.isBizError()) {
+                //                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.BusinessError));
+                //                        } else {
+                //                            return Flowable.just(model);
+                //                        }
+                //                    }
+                //                });
+            }
+        };
+    }
+
 
 }

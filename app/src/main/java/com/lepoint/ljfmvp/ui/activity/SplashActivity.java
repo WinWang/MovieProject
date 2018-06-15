@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.jude.swipbackhelper.SwipeBackHelper;
 import com.lepoint.ljfmvp.R;
 import com.lepoint.ljfmvp.base.BaseActivity;
 import com.lepoint.ljfmvp.utils.AppManager;
@@ -39,9 +38,13 @@ public class SplashActivity extends BaseActivity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
         super.onCreate(savedInstanceState);
-        SwipeBackHelper.getCurrentPage(this).setSwipeBackEnable(false);
     }
 
+
+    @Override
+    public boolean isSwipe() {
+        return false;
+    }
 
     @Override
     public void getNetData() {

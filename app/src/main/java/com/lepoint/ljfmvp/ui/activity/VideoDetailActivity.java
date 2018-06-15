@@ -2,7 +2,6 @@ package com.lepoint.ljfmvp.ui.activity;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,16 +12,13 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lepoint.ljfmvp.R;
-import com.lepoint.ljfmvp.adapter.MovieAdapter;
 import com.lepoint.ljfmvp.adapter.MovieDetailAboutAdapter;
 import com.lepoint.ljfmvp.adapter.MovieDetailAdapter;
 import com.lepoint.ljfmvp.adapter.VideoCommentAdapter;
 import com.lepoint.ljfmvp.base.BaseActivity;
-import com.lepoint.ljfmvp.model.HomeListBean;
 import com.lepoint.ljfmvp.model.VideoDetailBean;
 import com.lepoint.ljfmvp.present.VideoDetailPresent;
 import com.lepoint.ljfmvp.utils.DialogUtil;
-import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
@@ -64,6 +60,12 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     private RecyclerView aboutRecycle;
     private MovieDetailAboutAdapter aboutAdapter;
     private QMUITipDialog qmuiTipDialog;
+
+
+    @Override
+    public boolean isSwipe() {
+        return false;
+    }
 
     @Override
     public void initData(Bundle savedInstanceState) {

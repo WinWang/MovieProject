@@ -1,25 +1,26 @@
 package com.lepoint.ljfmvp.present;
 
-import android.content.Context;
 import android.view.View;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
 import com.lepoint.ljfmvp.base.BasePresent;
-import com.lepoint.ljfmvp.http.HttpUtils;
+import com.lepoint.ljfmvp.base.MyApp;
 import com.lepoint.ljfmvp.http.RetrofitManager;
+import com.lepoint.ljfmvp.http.RxUtils;
 import com.lepoint.ljfmvp.http.URLConfig;
 import com.lepoint.ljfmvp.model.HomeChannelBean;
 import com.lepoint.ljfmvp.model.HomeListBean;
-import com.lepoint.ljfmvp.model.UpdateBean;
 import com.lepoint.ljfmvp.ui.fragment.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.droidlover.xdroidmvp.log.XLog;
+import cn.droidlover.xdroidmvp.cache.DiskCache;
 import cn.droidlover.xdroidmvp.net.ApiSubscriber;
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.XApi;
+import io.reactivex.Flowable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by admin on 2018/4/12.
@@ -31,8 +32,10 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
      * 获取首页列表信息
      */
     public void getHomeListData() {
-        RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHomeList()
-                .compose(XApi.<HomeListBean>getApiTransformer())
+        Flowable<HomeListBean> fromCache = RxUtils.rxCreateDiskObservable("homeList", HomeListBean.class);
+        Flowable<HomeListBean> fromNetWork = RetrofitManager.getInstance().getApiService(URLConfig.BASE_MOVIE_URL).getHomeList();
+        Flowable<HomeListBean> concatFloawable = Flowable.concat(fromCache, fromNetWork);
+        concatFloawable.compose(XApi.<HomeListBean>getApiTransformer())
                 .compose(XApi.<HomeListBean>getScheduler())
                 .compose(getV().<HomeListBean>bindToLifecycle())
                 .subscribe(new ApiSubscriber<HomeListBean>() {
@@ -49,9 +52,15 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                     }
 
                     @Override
-                    protected void onSuccess(HomeListBean homeListBean) {
+                    protected void onSuccess(final HomeListBean homeListBean) {
                         getV().refreshHome.finishRefresh(1000);
                         if (homeListBean.getCode() == 200) {
+                            Schedulers.io().createWorker().schedule(new Runnable() {
+                                @Override
+                                public void run() {
+                                    DiskCache.getInstance(MyApp.getContext()).put("homeList", JSON.toJSONString(homeListBean));
+                                }
+                            });
                             getV().qmuiEmpty.show();
                             getV().refreshHome.setVisibility(View.VISIBLE);
                             HomeListBean.RetBean ret = homeListBean.getRet();
@@ -69,7 +78,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                                 getV().setBannerData(bannerList, titleList, childList);
 
                                 for (HomeListBean.RetBean.ListBean bean : list) {
-                                    switch (bean.getTitle()){
+                                    switch (bean.getTitle()) {
                                         case "免费推荐":
                                             getV().setFreeRecommonedData(bean.getChildList());
                                             break;
@@ -130,7 +139,7 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
 
                     @Override
                     protected void onSuccess(HomeChannelBean channelBean) {
-//                        getV().refreshHome.finishRefresh();
+                        //                        getV().refreshHome.finishRefresh();
                         if (channelBean.getCode() == 200) {
                             HomeChannelBean.RetBean ret = channelBean.getRet();
                             List<HomeChannelBean.RetBean.ColumnListBean> columnList = ret.getColumnList();
