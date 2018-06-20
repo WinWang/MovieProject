@@ -113,10 +113,10 @@ public abstract class BaseActivity<P extends IPresent> extends XActivity<P> {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        AppManager.getAppManager().finishActivity(this);
         if(isSwipe()){
             SwipeBackHelper.onDestroy(this);
         }
+        AppManager.getAppManager().finishActivity(this);
     }
 
     @Override

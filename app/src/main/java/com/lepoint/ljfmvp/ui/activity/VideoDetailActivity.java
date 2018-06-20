@@ -61,7 +61,6 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     private MovieDetailAboutAdapter aboutAdapter;
     private QMUITipDialog qmuiTipDialog;
 
-
     @Override
     public boolean isSwipe() {
         return false;
@@ -72,8 +71,8 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         mediaID = getIntent().getStringExtra("mediaID");
         initView();
         initListener();
-        getP().getVideoDetail(mediaID,context);
-        getP().getVideoAuth(mediaID,context);
+        getP().getVideoDetail(mediaID, context);
+        getP().getVideoAuth(mediaID, context);
     }
 
     private void initListener() {
@@ -81,7 +80,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 String dataId = aboutList.get(position).getDataId();
-                getP().getVideoDetail(dataId,context);
+                getP().getVideoDetail(dataId, context);
             }
         });
 
@@ -94,8 +93,8 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
                     qmuiTipDialog.show();
                 }
                 String dataId = likeList.get(position).getDataId();
-                getP().getVideoAuth(dataId,context);
-                getP().getVideoDetail(dataId,context);
+                getP().getVideoAuth(dataId, context);
+                getP().getVideoDetail(dataId, context);
             }
         });
 
@@ -107,7 +106,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         refreshVideoDetail.setEnableRefresh(false);
         refreshVideoDetail.setEnableLoadMore(false);
         refreshVideoDetail.setEnableAutoLoadMore(false);
-        topBar.addRightImageButton(R.mipmap.ic_collection,R.id.topbar_right_change_button).setOnClickListener(new View.OnClickListener() {
+        topBar.addRightImageButton(R.mipmap.ic_collection, R.id.topbar_right_change_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getvDelegate().toastShort("暂未开启，敬请期待");
@@ -194,6 +193,7 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         objects[0] = map;
         videoPlayer.setUp(objects, 0, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, title);
         videoPlayer.startVideo();
+
         if (!TextUtils.isEmpty(dataBean.getRegion()) || !TextUtils.isEmpty(dataBean.getVideoType())) {
             videoTime.setText(dataBean.getAirTime() + " 丨 " + dataBean.getRegion() + " 丨 " + dataBean.getVideoType());
         } else {
@@ -247,15 +247,18 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
         super.onBackPressed();
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
         JZVideoPlayer.releaseAllVideos();
     }
 
+
     @Override
     public void getNetData() {
-        getP().getVideoDetail(mediaID,context);
-        getP().getVideoAuth(mediaID,context);
+        getP().getVideoDetail(mediaID, context);
+        getP().getVideoAuth(mediaID, context);
     }
+
 }

@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.View;
 
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
-import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
@@ -29,7 +28,6 @@ public abstract class XActivity<P extends IPresent> extends RxAppCompatActivity 
     private RxPermissions rxPermissions;
 
     private Unbinder unbinder;
-    protected QMUITopBar topBar;
 
 
     @Override
