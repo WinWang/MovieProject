@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\LjfMovieProject\MovieProject\mvp\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="E:\LjfMovieProject\MovieProject\mvp\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="G:\AndroidProject\ljfmvp-master_new\ljfmvp-master\mvp\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="G:\AndroidProject\ljfmvp-master_new\ljfmvp-master\mvp\src\debug\jniLibs"/></dataSet></merger>

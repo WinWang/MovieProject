@@ -74,17 +74,22 @@
         <activity android:name=".ui.activity.MainActivity" />
         <activity
             android:name=".ui.activity.HomeActivity"
-            android:screenOrientation="portrait" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+             />
         <activity
             android:name=".ui.activity.VideoDetailActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.MovieTypeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity android:name=".ui.activity.VideoHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.SeachActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.NewsActivity"
             android:screenOrientation="portrait"/>

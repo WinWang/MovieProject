@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.lepoint.ljfmvp.R;
+import com.lepoint.ljfmvp.utils.CrashHandler;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import cn.droidlover.xdroidmvp.XDroidConf;
@@ -44,7 +45,7 @@ public class MyApp extends Application {
         Realm.setDefaultConfiguration(config);
         XDroidConf.ROUTER_ANIM_ENTER = R.anim.slide_left_in;
         XDroidConf.ROUTER_ANIM_EXIT = R.anim.slide_left_out;
-
+        CrashHandler.getInstance().init(this);
 
     }
 

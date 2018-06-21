@@ -61,10 +61,6 @@ public class VideoDetailActivity extends BaseActivity<VideoDetailPresent> {
     private MovieDetailAboutAdapter aboutAdapter;
     private QMUITipDialog qmuiTipDialog;
 
-    @Override
-    public boolean isSwipe() {
-        return false;
-    }
 
     @Override
     public void initData(Bundle savedInstanceState) {

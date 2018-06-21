@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.zhouyou.view.seekbar.SignSeekBar
+        android:paddingTop="60px"
+        android:id="@+id/demo_5_seek_bar_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        app:ssb_anim_duration="300"
+        app:ssb_auto_adjust_section_mark="true"
+        app:ssb_second_track_color="@color/qmui_config_color_blue"
+        app:ssb_second_track_size="6dp"
+        app:ssb_show_section_mark="true"
+        app:ssb_show_section_text="true"
+        app:ssb_show_thumb_shadow="true"
+        app:ssb_show_thumb_text="false"
+        app:ssb_sides_labels="@array/labels"
+        app:ssb_text_space="5dp"
+        app:ssb_thumb_radius="5dp"
+        app:ssb_thumb_radius_on_dragging="7dp"
+        app:ssb_thumb_text_size="22px"
+        app:ssb_touch_to_seek="true"
+        app:ssb_track_color="@color/colorGray"
+        app:ssb_track_size="5dp"
+        app:ssb_unusable_color="#ff0000" />
+
+
+</LinearLayout>

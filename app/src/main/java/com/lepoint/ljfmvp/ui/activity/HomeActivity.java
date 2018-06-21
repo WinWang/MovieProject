@@ -158,4 +158,11 @@ public class HomeActivity extends BaseActivity {
     public void getNetData() {
 
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("我走了这个方法测试>>>>>>>>>>>>>>");
+    }
 }

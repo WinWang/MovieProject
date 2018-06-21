@@ -8,6 +8,7 @@
     <color name="colorGray">#B0B0B0</color>
     <color name="orangeColor">#FC1764</color>
     <color name="black">#000000</color>
+    <color name="green">#11EE96</color>
     <!--<color name="qmui_config_color_blue">#FF4081</color>-->
 
 </resources>

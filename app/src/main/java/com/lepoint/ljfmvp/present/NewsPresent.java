@@ -20,7 +20,7 @@ public class NewsPresent extends BasePresent<NewsActivity> {
                 .subscribe(new ApiSubscriber<NewsDetailBean>() {
                     @Override
                     protected void onFail(NetError error) {
-
+                        getV().setRetryView(error);
                     }
 
                     @Override

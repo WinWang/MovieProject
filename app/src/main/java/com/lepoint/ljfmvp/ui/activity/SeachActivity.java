@@ -209,9 +209,15 @@ public class SeachActivity extends BaseActivity<SeachPresent> {
 
     public void setData(List<SeachListBean.RetBean.ListBean> list) {
         dataList.clear();
-        dataList.addAll(list);
-        seachNetAdapter.notifyDataSetChanged();
-        dialog.dismiss();
+        if(list!=null&&list.size()>0){
+            dataList.addAll(list);
+            seachNetAdapter.notifyDataSetChanged();
+        }else {
+            getvDelegate().toastShort("客官，木有找到啊");
+        }
+        if(dialog!=null){
+            dialog.dismiss();
+        }
     }
 
 

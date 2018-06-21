@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">电影无极限</string>
+    <string name="app_name">M生活</string>
+
+
+    <string-array name="labels">
+        <item>最小</item>
+        <item>稍小</item>
+        <item>标准</item>
+        <item>稍大</item>
+        <item>最大</item>
+    </string-array>
 </resources>

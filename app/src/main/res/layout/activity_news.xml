@@ -9,6 +9,8 @@
 
     <include layout="@layout/layout_head_top_bar" />
 
+    <include layout="@layout/empty_loading_layout"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

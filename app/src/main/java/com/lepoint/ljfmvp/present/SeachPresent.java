@@ -34,9 +34,7 @@ public class SeachPresent extends BasePresent<SeachActivity> {
                     @Override
                     protected void onSuccess(SeachListBean seachListBean) {
                         List<SeachListBean.RetBean.ListBean> list = seachListBean.getRet().getList();
-                        if (list != null && list.size() > 0) {
-                            getV().setData(list);
-                        }
+                        getV().setData(list);
                     }
                 });
     }

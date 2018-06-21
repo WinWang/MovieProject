@@ -36,6 +36,7 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
     implementation rootProject.ext.dependencies["jiaozi"]
+    implementation rootProject.ext.dependencies["seekBar"]
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'jp.wasabeef:glide-transformations:2.0.2'
     implementation 'com.jude:swipebackhelper:3.1.2'
