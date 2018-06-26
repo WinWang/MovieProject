@@ -5,7 +5,7 @@
 下载地址 <a href="https://fir.im/d6mb">apk下载</a>  /r/n/r/n/r/n
 
 
-i[](https://github.com/WinWang/MovieProject/blob/master/screenShot/2345%E6%88%AA%E5%9B%BE20180626153215.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/2345%E6%88%AA%E5%9B%BE20180626153215.png)
 
 
 
