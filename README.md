@@ -9,23 +9,23 @@
 
 
 
-![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111713.png)![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111906.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111713.png)   ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111906.png)
 
 
 
-![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111932.png)![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111945.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111932.png)   ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111945.png)
 
 
 
-![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111954.png)![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112004.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-111954.png)   ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112004.png)
 
 
 
-![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112026.png)![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112039.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112026.png)   ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112039.png)
 
 
 
-![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112126.png)![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112200.png)
+![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112126.png)   ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112200.png)
 
 
 ![](https://github.com/WinWang/MovieProject/blob/master/screenShot/device-2018-06-25-112217.png)
