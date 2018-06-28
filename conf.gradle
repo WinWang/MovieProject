@@ -47,7 +47,7 @@ ext {
             "canary-debug"               : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
             "canary-release"             : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
 
-            "QMUI"                       : "com.qmuiteam:qmui:1.1.2",
+            "QMUI"                       : "com.qmuiteam:qmui:1.1.5",
             "EventBus"                   : "org.greenrobot:eventbus:3.1.1",
             "jiaozi"                     : "cn.jzvd:jiaozivideoplayer:6.2.10",
             "seekBar"                    : "com.zhouyou:signseekbar:1.0.6"
