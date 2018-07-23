@@ -58,7 +58,11 @@ public class HomeFragPresent extends BasePresent<HomeFragment> {
                             Schedulers.io().createWorker().schedule(new Runnable() {
                                 @Override
                                 public void run() {
-                                    DiskCache.getInstance(MyApp.getContext()).put("homeList", JSON.toJSONString(homeListBean));
+                                    try {
+                                        DiskCache.getInstance(MyApp.getContext()).put("homeList", JSON.toJSONString(homeListBean));
+                                    } catch (Exception e) {
+
+                                    }
                                 }
                             });
                             getV().qmuiEmpty.show();
