@@ -75,9 +75,10 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void startJump() {
-        Flowable.interval(1, 1, TimeUnit.SECONDS)
+        Flowable.interval(0, 1, TimeUnit.SECONDS)
                 .compose(this.<Long>bindUntilEvent(ActivityEvent.DESTROY))
                 .subscribeOn(AndroidSchedulers.mainThread())
+                .unsubscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(new Function<Long, Long>() {
 

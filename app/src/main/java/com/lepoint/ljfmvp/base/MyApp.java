@@ -36,15 +36,15 @@ public class MyApp extends Application {
         AutoLayoutConifg.getInstance().useDeviceSize();
         registerProvider();
         //        LeakCanary.install(this);
-        XDroidConf.devMode(true);
+        XDroidConf.devMode(false);
         XDroidConf.IL_ERROR_RES = R.mipmap.img_default;
         XDroidConf.IL_LOADING_RES = R.mipmap.img_default;
+        XDroidConf.ROUTER_ANIM_ENTER = R.anim.slide_left_in;
+        XDroidConf.ROUTER_ANIM_EXIT = R.anim.slide_left_out;
         //        XDroidConf.LOG = false;
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
-        XDroidConf.ROUTER_ANIM_ENTER = R.anim.slide_left_in;
-        XDroidConf.ROUTER_ANIM_EXIT = R.anim.slide_left_out;
         CrashHandler.getInstance().init(this);
 
     }
